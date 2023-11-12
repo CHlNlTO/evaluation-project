@@ -9,14 +9,16 @@ import UserEvaluationPage from './pages/UserEvaluationPage';
 function App() {
     return (
     <div className="App">
-      <Routes>
+       <UserEvaluationPage />
+    </div>
+  );
+}
+
+<Routes>
         <Route path="Login" element={<Login />} />
         <Route path="Admin" element={<Admin />} />
         {/* <Route path="UserMainPage" element={<UserMainPage />} /> */}
         <Route path="/" element={<UserEvaluationPage />} />
-      </Routes>
-    </div>
-  );
-}
+</Routes>
 
 export default App;

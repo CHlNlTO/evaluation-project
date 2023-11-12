@@ -1,0 +1,74 @@
+.form-likert-scale-1,
+.form-likert-scale-2,
+.form-likert-scale-3,
+.form-likert-scale-4,
+.form-likert-scale-5 {
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: calc(50% + 113px);
+  border-radius: 50%;
+  background-color: var(--color-dimgray-100);
+  border: 2px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+}
+.form-likert-scale-2,
+.form-likert-scale-3,
+.form-likert-scale-4,
+.form-likert-scale-5 {
+  left: calc(50% + 52px);
+  width: 21px;
+}
+.form-likert-scale-3,
+.form-likert-scale-4,
+.form-likert-scale-5 {
+  left: calc(50% - 11px);
+}
+.form-likert-scale-4,
+.form-likert-scale-5 {
+  left: calc(50% - 73px);
+}
+.form-likert-scale-5 {
+  left: calc(50% - 133px);
+  width: 20px;
+}
+.form-likert-score-container {
+  position: absolute;
+  width: 100%;
+  top: 81px;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 27px;
+  overflow: hidden;
+}
+.form-question-title {
+  position: absolute;
+  top: 29px;
+  left: calc(50% - 136px);
+  font-weight: 500;
+  display: inline-block;
+  width: 299px;
+}
+.form-question-number {
+  position: absolute;
+  top: 32px;
+  left: calc(50% - 180px);
+  font-weight: 500;
+}
+.form-question-component {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-white);
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 128.2px;
+  overflow: hidden;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-smi);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

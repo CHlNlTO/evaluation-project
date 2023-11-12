@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap");
+.user-evaluation-page {
+    margin: 0;
+    line-height: normal;
+    overflow-x: hidden;
+}
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-inherit: inherit;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-3xs: 10px;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-smi: 13px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-midnightblue: #10135a;
+  --color-gray-100: rgba(255, 255, 255, 0.5);
+  --color-gray-200: rgba(255, 255, 255, 0);
+  --color-dimgray-100: rgb(190, 190, 190);
+  --color-dimgray-200: rgb(190, 190, 190, 0.5);
+
+  /* Gaps */
+  --gap-0: 0px;
+  --gap-5xl: 24px;
+  --gap-6xl: 25px;
+  --gap-mini: 15px;
+
+  /* Paddings */
+  --padding-8xs: 5px;
+  --padding-xs: 12px;
+  --padding-28xl: 47px;
+  --padding-48xl: 67px;
+  --padding-3xl: 22px;
+  --padding-4xl: 23px;
+  --padding-2xl: 21px;
+  --padding-43xl: 62px;
+  --padding-27xl: 46px;
+
+  /* Border radiuses */
+  --br-26xl: 45px;
+  --br-9xl: 28px;
+  --br-11xs: 2px;
+  --br-lg: 18px;
+  --br-201xl: 220px;
+}
+
+
+.form-evaluation-question-auto- {
+  position: absolute;
+  top: 36px;
+  left: calc(50% - 399.1px);
+  height: calc(100vh - 195px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.form-likert-scale {
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 126px);
+  font-weight: 500;
+}
+.form-likert-scale-container {
+  position: absolute;
+  width: calc(100% - 0.2px);
+  top: 0;
+  right: 0.2px;
+  left: 0;
+  background-color: var(--color-white);
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 46.1px;
+  overflow: hidden;
+}
+.form-likert-scale-score-container {
+  position: absolute;
+  height: 18px;
+  left: 263px;
+  right: 263px;
+  top: 14px;
+}
+.form-likert-score-1 {
+
+position: absolute;
+width: 8px;
+height: 18px;
+left: calc(50% - 8px/2 + 122px);
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.form-likert-score-2 {
+
+position: absolute;
+width: 10px;
+height: 18px;
+left: calc(50% - 10px/2 + 63px);
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.form-likert-score-3 {
+
+position: absolute;
+width: 10px;
+height: 18px;
+left: calc(50% - 10px/2 + 1px);
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.form-likert-score-4 {
+position: absolute;
+width: 10px;
+height: 18px;
+left: calc(50% - 10px/2 - 60px);
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.form-likert-score-5 {
+position: absolute;
+width: 10px;
+height: 18px;
+left: calc(50% - 10px/2 - 121px);
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 18px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.form-body-evaluation-container {
+  position: absolute;
+  height: calc(100vh - 160px);
+  top: 165px;
+  bottom: 0;
+  left: calc(50% - 388.6px);
+  border-right: 0.1px solid var(--color-dimgray-100);
+  border-left: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 778.2px;
+  overflow: hidden;
+  text-align: left;
+}
+.form-current-score,
+.form-subject-name {
+  position: absolute;
+  top: 42px;
+  left: calc(50% - 31.1px);
+  font-weight: 500;
+}
+.form-current-score {
+  top: 0;
+  left: calc(50% - 33.3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 46px;
+}
+.form-current-score-container,
+.form-overall-score-container {
+  position: relative;
+  border-top: 0.1px solid var(--color-dimgray-100);
+  border-right: 0.5px solid var(--color-dimgray-100);
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  border-left: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 66.6px;
+  height: 46.2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.form-overall-score-container {
+  border-right: 0.1px solid var(--color-dimgray-100);
+  border-left: 0.5px solid var(--color-black);
+}
+.form-score-progress-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 177px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.form-evaluation-score-containe {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 46px;
+}
+.form-professor-name {
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 74px);
+  font-weight: 500;
+}
+.frame {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 778px;
+  height: 46px;
+  overflow: hidden;
+}
+.form-professor-details-contain {
+  position: absolute;
+  top: 92px;
+  left: calc(50% - 388.6px);
+  background-color: var(--color-white);
+  border-right: 0.1px solid var(--color-dimgray-100);
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  border-left: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 778.2px;
+  height: 73.1px;
+  overflow: hidden;
+}
+.form-submit-title {
+  position: absolute;
+  top: 17px;
+  left: calc(50% - 25.5px);
+  font-size: var(--font-size-mini);
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 10px;
+}
+.form-submit-button {
+  position: absolute;
+  border-radius: var(--br-201xl);
+  height: 44px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #a6a6a6;
+  top: 0;
+  width: 109px;
+  left: calc(50% - 109px/2 - 0.5px);
+  background: #A6A6A6;
+  border-radius: 220px;
+}
+.form-submit-button-container {
+  position: absolute;
+  width: 280px;
+  height: 44px;
+  left: calc(50% - 390px/2 - 249px);
+  top: 107px;
+  border-radius: 220px;
+}
+.user-navbar-dropdown-container {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  right: 0px;
+  top: 92px;
+  overflow: hidden;
+}
+.professor-name {
+  flex: 1;
+  position: relative;
+}
+.professor-details-container,
+.professor-name,
+.professor-subject {
+  width: 248px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.professor-subject {
+  position: relative;
+  font-size: 9px;
+}
+.professor-details-container {
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 124px);
+  height: 38px;
+  flex-direction: column;
+}
+.back-arrow-icon {
+  position: absolute;
+  top: 23px;
+  left: 33px;
+  width: 10.5px;
+  height: 20px;
+}
+.form-navbar-top1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 66.1px;
+}
+.form-current-score1 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 32.75px);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 46px;
+}
+.form-current-score-container1 {
+  position: relative;
+  border-right: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 65.5px;
+  height: 44px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.form-overall-score1 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 33.25px);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 46px;
+}
+.form-overall-score-container1 {
+  position: relative;
+  border-left: 0.5px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 62.5px;
+  height: 44px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.form-score-progress-container1 {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  width: 126px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.form-evaluation-score-containe1 {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  right: 0;
+  left: 0;
+  height: 46px;
+  font-size: var(--font-size-sm);
+}
+.form-navbar-top {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 66px;
+  overflow: hidden;
+}
+.form-hamburger-menu-icon {
+  position: absolute;
+  bottom: 21.1px;
+  left: calc(50% + 144px);
+  width: 22px;
+  height: 15px;
+}
+.form-course-icon,
+.form-home-icon,
+.form-profs-icon {
+  position: absolute;
+  bottom: 17.2px;
+  left: calc(50% + 39.2px);
+  width: 21.7px;
+  height: 21.7px;
+}
+.form-course-icon,
+.form-home-icon {
+  left: calc(50% - 62.7px);
+  width: 19px;
+}
+.form-home-icon {
+  bottom: 18.1px;
+  left: calc(50% - 166px);
+  width: 20px;
+  height: 21px;
+}
+.form-navbar-bottom {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 56.1px;
+}
+.form-likert-score-container-icon1 {
+  position: absolute;
+  width: 100%;
+  top: 81px;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 27px;
+}
+.form-question-title1 {
+  position: absolute;
+  top: 29px;
+  left: calc(50% - 136px);
+  font-weight: 500;
+  display: inline-block;
+  width: 299px;
+}
+.form-question-number1 {
+  position: absolute;
+  top: 32px;
+  left: calc(50% - 180px);
+  font-weight: 500;
+}
+.form-question-component1 {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-white);
+  border-top: 0.1px solid var(--color-black);
+  border-bottom: 0.1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 128.2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.evaluation-question-container {
+  position: absolute;
+  height: calc(100% - 46px);
+  width: 100%;
+  top: 46px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-body-evaluation-container1,
+.form-likert-scale-container1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+.form-likert-scale-container1 {
+  background-color: var(--color-white);
+  border-bottom: 0.1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 46.1px;
+  font-size: var(--font-size-mini);
+}
+.form-body-evaluation-container1 {
+  height: calc(100% - 56px);
+  bottom: 56px;
+}
+.form-body-evaluation-moible-co {
+  position: absolute;
+  width: 100%;
+  top: 66px;
+  right: 0;
+  left: 0;
+  height: 958px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-smi);
+}
+.user-evaluation-page-mobile-v1 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 214.5px);
+  background-color: var(--color-white);
+  width: 430px;
+  height: 1024px;
+  overflow: hidden;
+  display: none;
+}
+.user-evaluation-page {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1200px) {
+  .form-hamburger-menu-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .form-body-evaluation-container {
+    display: none;
+    width: 778px;
+  }
+  .form-hamburger-menu-icon,
+  .user-evaluation-page-mobile-v1 {
+    display: flex;
+  }
+}
+@media screen and (max-width: 420px) {
+  .form-body-evaluation-container {
+    display: none;
+  }
+  .form-hamburger-menu-icon,
+  .user-evaluation-page-mobile-v1 {
+    display: flex;
+  }
+}
+@media screen and (max-width: 680px) {
+  .form-hamburger-menu-icon {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .form-body-evaluation-container {
+    display: none;
+  }
+  .form-hamburger-menu-icon {
+    display: flex;
+  }
+}
+@media screen and (max-width: 1165px) {
+  .form-body-evaluation-container,
+  .form-professor-details-contain,
+  .form-submit-button-container,
+  .user-navbar-dropdown-container {
+    display: none;
+  }
+  .user-evaluation-page-mobile-v1 {
+    display: flex;
+  }
+}

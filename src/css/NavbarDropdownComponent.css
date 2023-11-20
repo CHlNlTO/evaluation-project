@@ -58,6 +58,7 @@
   margin-right: 50px;
   box-shadow: 4px 25px 30px 10px rgba(0, 0, 0, 0.15);
   height: 280px;
+  display: block;
 }
 @media screen and (max-width: 1200px) {
   .navbar-dropdown-logout {

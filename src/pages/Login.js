@@ -1,134 +1,269 @@
 import supabase from "../config/supabaseClient"
-import { useEffect, useState} from 'react'
-//import "../css/login.css"
+import { useState, useEffect } from 'react'
+import "../css/Login.css"
+import useFormValidation from '../utilities/FormValidation';
 
 
-const Login = () => {   
+const Login = ({ handleLogin, user, setUser, roleId, setRoleId }) => {   
 
-    const container = document.getElementById("container")
-    const classList = document.getElementById("classList")
+    // Switch from Login to Register Logic
+    const [isClicked, setIsClicked] = useState(false);
+    const switchPage = () => {
+        setIsClicked((prevIsClicked) => !prevIsClicked);
+    };
 
-    const registerButton = () => {
-        container.classList.add("right-panel-active");
-      };
+    const {
+        stdnum,
+        Fname,
+        Lname,
+        email,
+        password,
+        emailInputValue,
+        stdnumError,
+        FnameError,
+        LnameError,
+        emailError,
+        passwordError,
+        setEmailError,
+        setPasswordError,
+        setStdnumError,
+        handleInputChange,
+        checkRequired,
+        toUpperCase,
+        toLowerCase,
+        setStdnum,
+        setFname,
+        setLname,
+        setEmail,
+        setEmailInputValue,
+        setPassword,
+        updateEmailInput
+      } = useFormValidation();
 
-    const loginButton = () => {
-        container.classList.remove("right-panel-active");
-      };
+    const [userId, setUserId] = useState(0);
+    const [pass, setPass] = useState(false);
 
-    //const navigate = useNavigate();
 
+    // Login Logic
     const [fetchError, setFetchError] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
+    const fetchLogin = async (event) => {
+        event.preventDefault();
+        try {
+          const email = document.querySelector('.email-2').value;
+          const password = document.querySelector('.password-2').value;
 
-    useEffect(() => {
-        const fetchEmail = async () => {
-            const { data, error } = await supabase
-            .from('admin')
-            .select('username', 'password')
-            .eq(document.querySelector('.email-2').value, document.querySelector('.password-2').value)
+          const { data, error } = await supabase
+            .from('users')
+            .select("email, role_id")
+            .eq('email', email)
+            .eq('password', password)
+    
+          if (error) {
+            setFetchError(error);
+            setEmailError('Wrong email');
+            setPasswordError('Wrong password')
+          }
+    
+          if (data && data.length > 0) {
+            setUser(data[0].user_id);
+            setRoleId(data[0].role_id);
+            handleLogin();
+          } else {
+            setPasswordError('Wrong email or password');
+            console.log(data);
+         
+          }
+        } catch (error) {
+          console.error('Error:', error.message);
+        }
+      };
 
-            if (error) {    
-                setFetchError('Wrong input')
-                setEmail(null)
-                setPassword(null)
-                console.log(error)
+    
+    const handleRegistration = async (event) => {
+        event.preventDefault();
+      
+        const isRequired = checkRequired(['stdnum', 'Fname', 'Lname', 'email', 'password']);
+      
+        if (isRequired) {
+          return;
+        }
+        setPass(true);
+
+        try {
+            const student_number = toUpperCase(stdnum);
+            const emailAdd = toLowerCase(emailInputValue);
+            
+            // First Query To Check Duplicates From Students Table
+            const { data: existingUser, error: duplicateError } = await supabase
+            .from('students')
+            .select('student_number')
+            .eq('student_number', student_number);
+
+            if (duplicateError) {
+                console.error('Error checking for duplicates:', duplicateError.message);
+                return;
+            } 
+
+            if (existingUser && existingUser.length > 0) {
+                setStdnumError('Student Number is already registered');
+                return;
+            } 
+
+            // Second Query To Insert Into User Table
+            const { data: userData, error: userError } = await supabase
+              .from('users')
+              .upsert([
+                {
+                  email: emailAdd,
+                  password: password,
+                  role_id: 2
+                },
+              ]);
+        
+            if (userError) {
+              console.error('Error saving data to Supabase:', userError.message);
+              return;
             }
-            if (data) {
-                console.log("Success")
-                //navigate('./UserMainPage');
-                
+            
+            // Third Query To Extract User ID From User Table
+            const { data: userIdData, error: userIdError } = await supabase
+            .from('users')
+            .select('user_id')
+            .eq('email', emailAdd);
+
+            if (userIdError) {
+                console.error('Error retrieving data:', userIdError.message);
+                return;
+            } 
+
+            if (userIdData && userIdData.length > 0) {
+                setUserId(userIdData[0].user_id);
+            } 
+        
+        } catch (error) {
+            console.error('Catch Error during registration:', error.message);
+          }
+
+      };
+
+    useEffect(() => {  
+      const handleStudentInsertion = async () => {
+        try {
+          console.log(userId);
+          if (userId && userId >= 0) {
+            // Fourth Query To Insert Into Students Table
+            const { data: studentData, error: errorStudentData } = await supabase
+              .from('students')
+              .upsert([
+                {
+                  user_id: userId,
+                  student_number: stdnum,
+                  first_name: Fname,
+                  last_name: Lname,
+                },
+              ]);
+  
+              
+              setPassword('');
             }
+          } catch (error) {
+            
+          }
+          console.log("Student registration successful:");
+        };
+        
+        if (userId) {
+        handleStudentInsertion();
         }
 
-        fetchEmail()
-    }, [])
+      }, [userId]);
 
     return (
-        <div className="page landing">
-            <div className="container" id="container">
-                <div className="form-container register-container">
-                    <form>
-                    <h1 className="register-title">EVALUATION FORM</h1>
-                    <div className="form-control">
-                        <input type="text" id="stdnum" placeholder="Student Number" />
-                        <small id="username-error"></small>
-                        <span></span>
-                    </div>
-                    <div className="form-control">
-                        <input type="text" id="Fname" placeholder="First Name" />
-                        <small id="username-error"></small>
-                        <span></span>
-                    </div>
-                    <div className="form-control">
-                        <input type="text" id="Lname" placeholder="Last Name" />
-                        <small id="username-error"></small>
-                        <span></span>
-                    </div>
-                    <div className="form-control">
-                        <input type="email" id="email" placeholder="Email" />
-                        <small id="email-error"></small>
-                        <span></span>
-                    </div>
-                    <div className="form-control">
-                        <input type="password" id="password" placeholder="Password" />
-                        <small id="password-error"></small>
-                        <span></span>
-                    </div>
-                    <button type="submit" value="submit">Register</button>
-                    </form>
-                </div>
-
-                <div className="form-container login-container">
-                    <form className="form-lg">
-                    <h1>EVALUATION FORM</h1>
-                    <div className="form-control2">
-                        <input type="email" className="email-2" placeholder="Email" />
-                        <small className="email-error-2"></small>
-                        <span></span>
-                    </div>
-                    <div className="form-control2">
-                        <input type="password" className="password-2" placeholder="Password" />
-                        <small className="password-error-2"></small>
-                        <span></span>
-                    </div>
-
-                    <div className="content">
-                        <div className="checkbox">
-                        <input type="checkbox" name="checkbox" id="checkbox" />
-                        <label htmlFor="">Remember me</label>
+        <div className="user-login-regiser-page">
+            <div className="user-login-register">
+                <div className = {isClicked ? 'login-register-container right-panel-active' : 'login-register-container'} >
+                    <div className="form-container register-container">
+                        <form onSubmit={handleRegistration}>
+                        <h1 className="register-title">EVALUATION FORM</h1>
+                        <div className={`form-control ${stdnumError.length > 0 ? 'error' : 'success'}`}>
+                            <input className="stdnum-input"type="text" id="stdnum" placeholder="Student Number" onChange={(e) => handleInputChange('stdnum', e.target.value)} onInput={(e) => updateEmailInput(e.target.value)}/>
+                            <small id="username-error">{stdnumError}</small>
+                            <span></span>
                         </div>
-                        <div className="pass-link">
-                        <a href="https://www.google.com">Forgot password</a>
+                        <div className={`form-control ${FnameError.length > 0 ? 'error' : 'success'}`}>
+                            <input className="fname-input" type="text" id="Fname" placeholder="First Name" onChange={(e) => handleInputChange('Fname', e.target.value)} />
+                            <small id="Fname-error">{FnameError}</small>
+                            <span></span>
                         </div>
+                        <div className={`form-control ${LnameError.length > 0 ? 'error' : 'success'}`}s>
+                            <input className="lname-input"type="text" id="Lname" placeholder="Last Name" onChange={(e) => handleInputChange('Lname', e.target.value)} />
+                            <small id="username-error">{LnameError}</small>
+                            <span></span>
+                        </div>
+                        <div className={`form-control ${emailError.length > 0 ? 'error' : 'success'}`}>
+                            <input className="email-input" type="email" value={emailInputValue} id="email" placeholder="@firstasia.edu.ph" readOnly/>
+                            <small id="username-error">{emailError}</small>
+                            <span></span>
+                        </div>
+                        <div className={`form-control ${passwordError.length > 0 ? 'error' : 'success'}`} >
+                            <input className="password-input" type="password" id="password" placeholder="Password" onChange={(e) => handleInputChange('password', e.target.value)} />
+                            <small id="password-error">{passwordError}</small>
+                            <span></span>
+                        </div>
+                        <button className="register-button" type="submit" value="submit">Register</button>
+                        </form>
                     </div>
-                    <button type="submit" value="submit">Login</button>
+
+                    <form className="form-container login-container" >
+                        <div className="form-lg">
+                            <h1 className="register-title">EVALUATION FORM</h1>
+                            <div className="form-control2">
+                                <input type="email" className="email-2" placeholder="Email" tabIndex={1} />
+                                <small className="email-error-2"></small>
+                                <span></span>
+                            </div>
+                            <div className="form-control2">
+                                <input type="password" className="password-2" placeholder="Password" tabIndex={2} />
+                                <small className="password-error-2">{passwordError}</small>
+                                <span></span>
+                            </div>
+
+                            <div className="content">
+                                <div className="checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox" tabIndex={3} />
+                                <label htmlFor="">Remember me</label>
+                                </div>
+                                <div className="pass-link">
+                                <a className="forgot-password" href="https://www.google.com" tabIndex={4} >Forgot password</a>
+                                </div>
+                            </div>
+                            <button className="login-button"type="submit" value="submit" tabIndex={5} onClick = { fetchLogin } >Login</button>
+                        </div>
                     </form>
-                </div>
 
-                <div className="overlay-container">
-                    <div className="overlay">
-                        <div className="overlay-panel overlay-left">
-                            <h1 className="title">
-                            <div>Answer quick surveys</div>
-                            easily
-                            </h1>
-                            <button className="ghost" id="login" onClick={loginButton}>
-                            Login
-                            <i className="fa-solid fa-arrow-left"></i>
-                            </button>
-                        </div> 
+                    <div className="overlay-container">
+                        <div className="overlay">
+                            <div className="overlay-panel overlay-left">
+                                <h1 className="title">
+                                <div>Answer quick surveys</div>
+                                easily
+                                </h1>
+                                <button className="ghost goto-login-button" id="login" onClick={switchPage}>
+                                Login
+                                <i className="fa-solid fa-arrow-left"></i>
+                                </button>
+                            </div> 
 
-                        <div className="overlay-panel overlay-right">
-                            <h1 className="title">
-                            <div>Manage your surveys</div>
-                            with ease
-                            </h1>
-                            <button className="ghost" id="register" onClick={registerButton}>
-                            Register
-                            <i className="fa-solid fa-arrow-right"></i>
-                            </button>
+                            <div className="overlay-panel overlay-right">
+                                <h1 className="title">
+                                <div>Manage your surveys</div>
+                                with ease
+                                </h1>
+                                <button className="ghost goto-register-button" id="register" tabIndex={6} onClick={switchPage}>
+                                Register
+                                <i className="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

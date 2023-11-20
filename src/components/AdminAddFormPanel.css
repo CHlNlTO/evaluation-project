@@ -1,0 +1,174 @@
+.admin-add-form-panel-cancel-bu1 {
+  position: absolute;
+  width: 90%;
+  top: calc(50% - 12.5px);
+  left: 4.16%;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-darkslategray);
+  text-align: center;
+  display: inline-block;
+  height: 24px;
+}
+.admin-add-form-panel-cancel-bu {
+  cursor: pointer;
+  border: 0.5px solid var(--color-black);
+  padding: 0;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 21.5px;
+  right: 215.5px;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 4px 7.4px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  width: 178px;
+  height: 51px;
+  overflow: hidden;
+}
+.admin-add-form-panel-cancel-bu:hover {
+  background-color: #e7e7e7;
+}
+.admin-add-form-panel-submit-bu1 {
+  position: absolute;
+  width: 90%;
+  top: calc(50% - 12.5px);
+  left: 4.16%;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  height: 24px;
+}
+.admin-add-form-panel-submit-bu {
+  cursor: pointer;
+  border: 0.5px solid var(--color-black);
+  padding: 0;
+  background-color: var(--color-midnightblue);
+  position: absolute;
+  top: 21.5px;
+  right: 20.5px;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 4px 7.4px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  width: 178px;
+  height: 51px;
+  overflow: hidden;
+}
+.admin-add-form-panel-submit-bu:hover {
+  cursor: pointer;
+  background-color: var(--color-lightblue);
+}
+.admin-add-form-panel-footer-co {
+  position: absolute;
+  width: 99.94%;
+  top: 410px;
+  right: 0.06%;
+  left: 0;
+  background-color: var(--color-gray-300);
+  border-bottom: 0.5px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 92.5px;
+  overflow: hidden;
+}
+.admin-create-form-panel-acad-y {
+  position: absolute;
+  top: 159px;
+  left: 28px;
+  width: 808px;
+  height: 102px;
+  overflow: hidden;
+}
+.admin-create-form-panel-name-e {
+  border: 0.1px solid var(--color-dimgray-200);
+  font-family: var(--font-inter);
+  font-size: var(--font-size-xl);
+  background-color: var(--color-gray-300);
+  position: absolute;
+  width: 47%;
+  top: calc(50% - 27.5px);
+  margin-right: calc(20%); /* Adjust this percentage as needed */
+  margin-left: 31.25%;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 4px 10.2px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  height: 54px;
+  overflow: hidden;
+  padding-left: 20px;
+  outline-color: #9e9e9e;
+}
+.admin-create-form-panel-name-t {
+  position: absolute;
+  width: 33.91%;
+  top: calc(50% - 12px);
+  left: 0;
+  display: inline-block;
+}
+.admin-create-form-panel-name-l {
+  position: absolute;
+  top: calc(50% - 102.25px);
+  left: 28px;
+  width: 808px;
+  height: 102px;
+  overflow: hidden;
+}
+.admin-add-form-body-container {
+  position: absolute;
+  width: calc(100% - 0.5px);
+  top: 92px;
+  right: 0.5px;
+  left: 0;
+  background-color: var(--color-gray-300);
+  border-bottom: 0.5px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 318.5px;
+  overflow: hidden;
+}
+.admin-create-form-panel-title-1 {
+  position: absolute;
+  width: 90.51%;
+  top: calc(50% - 12.25px);
+  left: 4.17%;
+  display: inline-block;
+}
+.admin-add-form-panel,
+.admin-add-form-panel-title-con {
+  position: absolute;
+  background-color: var(--color-gray-300);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.admin-add-form-panel-title-con {
+  width: calc(100% - 0.5px);
+  top: 0;
+  right: 0.5px;
+  left: 0;
+  border-bottom: 0.5px solid var(--color-dimgray-100);
+  height: 92.5px;
+}
+.admin-add-form-panel {
+  width: 45.03%;
+  top: 111px;
+  right: 25.55%;
+  left: 29.43%;
+  border-radius: var(--br-7xs);
+  box-shadow: 0 0 5.4px rgba(0, 0, 0, 0.25);
+  border-right: 0.5px solid var(--color-dimgray-100);
+  height: 502px;
+  display: block;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.admin-add-form-panel-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.79);
+    z-index: 10;
+
+}

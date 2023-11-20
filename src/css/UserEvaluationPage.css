@@ -3,9 +3,7 @@
     margin: 0;
     line-height: normal;
     overflow-x: hidden;
-}
-:root {
-  /* fonts */
+  /* fonts */   
   --font-inter: Inter;
   --font-inherit: inherit;
 
@@ -50,7 +48,6 @@
   --br-lg: 18px;
   --br-201xl: 220px;
 }
-
 
 .form-evaluation-question-auto- {
   position: absolute;

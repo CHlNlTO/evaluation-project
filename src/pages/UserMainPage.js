@@ -1,4 +1,4 @@
-//import "../css/UserMainPage.css";
+import "../css/UserMainPage.css";
 import ProfessorCardComponent from "../components/ProfessorCard";
 
 const UserMainPage = () => {
@@ -29,9 +29,9 @@ const UserMainPage = () => {
           <div className="navbar-list-container">
             <img
               className="hamburger-menu-icon" src="/img/hamburger_menu.png" alt="menu"/>
-            <button className="navbar-profs">PROFS</button>
-            <button className="navbar-courses">COURSES</button>
-            <button className="navbar-home">{`HOME          `}</button>
+            <button className="navbar-profs">Profs</button>
+            <button className="navbar-courses">Courses</button>
+            <button className="navbar-home">{`Home          `}</button>
           </div>
           <div className="navbar-title-container">
             <button className="navbar-title">EVALUATION FORM</button>

@@ -1,0 +1,67 @@
+.register-course-dropdown-list-2 {
+    /* fonts */
+    --font-poppins: Poppins;
+    --font-inherit: sans-serif;
+  
+    /* font sizes */
+    --font-size-smi: 13px;
+    --font-size-xl: 20px;
+    --font-size-lg: 18px;
+    --font-size-3xl: 22px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-mini: 15px;
+    --font-size-3xs: 10px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-gray-300: #fbfbfb;
+    --color-gray-200: rgba(255, 255, 255, 0);
+    --color-gray-100: rgba(255, 255, 255, 0.5);
+    --color-black: #000;
+    --color-dimgray-100: #737373;
+    --color-dimgray-200: #6f6f6f;
+    --color-midnightblue: #10135a;
+    --color-darkslategray: #424242;
+  
+    /* Gaps */
+    --gap-smi: 13px;
+    --gap-0: 0px;
+    --gap-3xs: 10px;
+    --gap-11xl: 30px;
+    --gap-4xs: 9px;
+    --gap-mini: 15px;
+    --gap-5xl: 24px;
+    --gap-6xl: 25px;
+  
+    /* Paddings */
+    --padding-3xs: 10px;
+    --padding-2xl: 21px;
+    --padding-4xs: 9px;
+    --padding-8xs: 5px;
+    --padding-xs: 12px;
+    --padding-28xl: 47px;
+    --padding-48xl: 67px;
+    --padding-3xl: 22px;
+    --padding-4xl: 23px;
+    --padding-43xl: 62px;
+    --padding-27xl: 46px;
+  
+    /* Border radiuses */
+    --br-lg: 18px;
+    --br-7xs: 6px;
+    --br-201xl: 220px;
+    --br-26xl: 45px;
+    --br-9xl: 28px;
+    --br-11xs: 2px;
+  border-radius: var(--br-lg);
+  background-color: var(--color-white);
+  box-shadow: 1px 4px 4.5px -1px rgba(0, 0, 0, 0.15);
+  overflow: scroll;
+  min-height: 36px;
+  max-height: 180px;
+  position: absolute;
+  z-index: 10000;
+  width: 190px;
+  margin-top: 5px;
+}

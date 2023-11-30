@@ -1,37 +1,66 @@
-//import "../css/UserMainPage.css";
+import "../css/UserMainPage.css";
 import ProfessorCardComponent from "../components/ProfessorCard";
+import UserSidePanel from "../components/UserSidePanel";
+import supabase from "../config/supabaseClient";
+import { useState, useEffect } from "react";
 
-const UserMainPage = () => {
+const UserMainPage = ({student}) => {
+
+  const [professors, setProfessors] = useState(null)
+  const [fetchError, setFetchError] = useState(null)
+
+  useEffect(() => {
+
+    const getProfessors = async () => {
+      try {
+  
+        const { data, error } = await supabase
+        .from('enrollees')
+        .select(
+          `enrollee_id,
+          subjects(subject_id, subject_name, professors(professor_id, first_name, last_name), evaluations(evaluation_id, evaluation_title))
+          `
+        )
+        .eq('student_id', 1)
+  
+        console.log("Fetched Data: ", data)
+  
+        if (error) {
+          console.log("Fetch Error: ", error)
+          setFetchError('No data found.')
+          setProfessors(null)
+          throw error;
+        }
+  
+        setProfessors(data);
+        setFetchError(null)
+        console.log("Set Professors: ", professors);
+  
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+      }
+  
+    };
+
+    if (student) {
+      getProfessors();
+    }
+      
+  }, [student])
+
+  
+
   return (
     <div className="user-main-page">
-      <div className="user-side-panel-1"></div>
-      <div className="user-side-panel">
-        <div className="user-details-section">
-          <div className="profile-container" />
-          <div className="user-name">Clark Wayne Abutal</div>
-          <div className="student-number">S2021100408</div>
-          <div className="student-number">BSCS-3A</div>
-        </div>
-        <div className="category-section-container">
-          <div className="category-section">
-            <div className="student-number">Recent Forms Answered</div>
-            <button className="evaluation-title-">
-              <ul className="cspl101">CSPL101</ul>
-            </button>
-            <div className="settings-icon-container">
-              <button className="settings-icon" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <UserSidePanel student = {student} />
       <main className="body-container" id="main">
         <div className="navbar-container">
           <div className="navbar-list-container">
             <img
               className="hamburger-menu-icon" src="/img/hamburger_menu.png" alt="menu"/>
-            <button className="navbar-profs">PROFS</button>
-            <button className="navbar-courses">COURSES</button>
-            <button className="navbar-home">{`HOME          `}</button>
+            <button className="navbar-profs">Profs</button>
+            <button className="navbar-courses">Courses</button>
+            <button className="navbar-home">{`Home          `}</button>
           </div>
           <div className="navbar-title-container">
             <button className="navbar-title">EVALUATION FORM</button>
@@ -41,25 +70,19 @@ const UserMainPage = () => {
           <main className="body-container1">
             <section className="college-deparment-container">
               <b className="college-department">
-                COLLEGE OF COMPUTING AND INFORMATION TECHNOLOGY
+                {student && student.courses.departments.department_title.toUpperCase()}
               </b>
             </section>
             <section className="professor-list-container">
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
-              <ProfessorCardComponent />
+              {fetchError && (<p>{fetchError}</p>)}
+              
+              {professors && (
+                <> 
+                  {professors.map(professor => (
+                      <ProfessorCardComponent professor = {professor} />
+                  ))}
+                </>
+              )}
             </section>
           </main>
         </section>

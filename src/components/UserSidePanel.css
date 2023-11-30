@@ -1,0 +1,152 @@
+.profile-container1 {
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-midnightblue);
+  border: 5px solid var(--color-white);
+  box-sizing: border-box;
+  width: 138px;
+  height: 138px;
+}
+.user-name1 {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+}
+.student-number1,
+.user-name1 {
+  position: relative;
+}
+.user-details-section1 {
+  border-radius: var(--br-11xs);
+  background-color: var(--color-gray-200);
+  width: 288px;
+  height: 380px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-43xl) var(--padding-27xl);
+  box-sizing: border-box;
+  gap: var(--gap-mini);
+}
+.settings-icon1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 37px;
+  height: 37px;
+  background-image: url(../img/admin-settings-logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.settings-icon-container1 {
+  position: absolute;
+  margin: 0 !important;
+  bottom: 22px;
+  left: 23px;
+  width: 37px;
+  height: 37px;
+  z-index: 1;
+}
+.category-section-container1,
+.user-side-panel1 {
+  width: 288px;
+  display: flex;
+  justify-content: flex-start;
+}
+.category-section-container1 {
+  flex: 1;
+  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+}
+.user-side-panel1 {
+  background-color: var(--color-midnightblue);
+  height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+
+  /* fonts */
+  --font-inter: Inter;
+  --font-inherit: inherit;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-3xs: 10px;
+  --font-size-lg: 18px;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-smi: 13px;
+  --font-size-3xl: 22px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-midnightblue: #10135a;
+  --color-gray-300: #fbfbfb;
+  --color-gray-100: rgba(255, 255, 255, 0.5);
+  --color-gray-200: rgba(255, 255, 255, 0);
+  --color-dimgray-100: #737373;
+  --color-dimgray-200: #6f6f6f;
+  --color-darkslategray: #424242;
+
+  /* Gaps */
+  --gap-0: 0px;
+  --gap-5xl: 24px;
+  --gap-6xl: 25px;
+  --gap-mini: 15px;
+  --gap-smi: 13px;
+  --gap-3xs: 10px;
+  --gap-11xl: 30px;
+  --gap-4xs: 9px;
+
+  /* Paddings */
+  --padding-8xs: 5px;
+  --padding-xs: 12px;
+  --padding-28xl: 47px;
+  --padding-48xl: 67px;
+  --padding-3xl: 22px;
+  --padding-4xl: 23px;
+  --padding-2xl: 21px;
+  --padding-43xl: 62px;
+  --padding-27xl: 27px;
+  --padding-3xs: 10px;
+  --padding-4xs: 9px;
+
+  /* Border radiuses */
+  --br-26xl: 45px;
+  --br-9xl: 28px;
+  --br-11xs: 2px;
+  --br-lg: 18px;
+  --br-7xs: 6px;
+  --br-201xl: 220px;
+}
+
+@media screen and (max-width: 960px) {
+  .user-side-panel1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .user-side-panel1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .user-side-panel1 {
+    display: none;
+  }
+}

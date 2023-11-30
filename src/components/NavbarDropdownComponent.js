@@ -1,101 +1,34 @@
 import { useMemo } from "react";
 import "../css/NavbarDropdownComponent.css";
 
-const NavbarDropdownComponent = ({
-  navbarDropdownComponentPosition,
-  navbarDropdownComponentTop,
-  navbarDropdownComponentRight,
-  navbarDropdownLogoutContaCursor,
-  navbarDropdownLogoutContaBorder,
-  navbarDropdownLogoutContaPadding,
-  navbarDropdownSettingsConCursor,
-  navbarDropdownSettingsConBorder,
-  navbarDropdownSettingsConPadding,
-  navbarDropdownAboutContaiCursor,
-  navbarDropdownAboutContaiBorder,
-  navbarDropdownAboutContaiPadding,
-  navbarDropdownAccountContCursor,
-  navbarDropdownAccountContBorder,
-  navbarDropdownAccountContPadding,
-}) => {
-  const navbarDropdownComponentStyle = useMemo(() => {
-    return {
-      position: navbarDropdownComponentPosition,
-      top: navbarDropdownComponentTop,
-      right: navbarDropdownComponentRight,
-    };
-  }, [
-    navbarDropdownComponentPosition,
-    navbarDropdownComponentTop,
-    navbarDropdownComponentRight,
-  ]);
-
-  const navbarDropdownLogoutContainStyle = useMemo(() => {
-    return {
-      cursor: navbarDropdownLogoutContaCursor,
-      padding: navbarDropdownLogoutContaPadding,
-    };
-  }, [
-    navbarDropdownLogoutContaCursor,
-    navbarDropdownLogoutContaPadding,
-  ]);
-
-  const navbarDropdownSettingsContaStyle = useMemo(() => {
-    return {
-      cursor: navbarDropdownSettingsConCursor,
-      padding: navbarDropdownSettingsConPadding,
-    };
-  }, [
-    navbarDropdownSettingsConCursor,
-    navbarDropdownSettingsConPadding,
-  ]);
-
-  const navbarDropdownAboutContaineStyle = useMemo(() => {
-    return {
-      cursor: navbarDropdownAboutContaiCursor,
-      padding: navbarDropdownAboutContaiPadding,
-    };
-  }, [
-    navbarDropdownAboutContaiCursor,
-    navbarDropdownAboutContaiPadding,
-  ]);
-
-  const navbarDropdownAccountContaiStyle = useMemo(() => {
-    return {
-      cursor: navbarDropdownAccountContCursor,
-      padding: navbarDropdownAccountContPadding,
-    };
-  }, [
-    navbarDropdownAccountContCursor,
-    navbarDropdownAccountContPadding,
-  ]);
+const NavbarDropdownComponent = () => {
 
   return (
     <div
       className="navbar-dropdown-component"
-      style={navbarDropdownComponentStyle}
+      style={{position: 'absolute', top:0 , right: 0}}
     >
       <div
         className="navbar-dropdown-logout-contain"
-        style={navbarDropdownLogoutContainStyle}
+        style={{cursor: 'pointer', padding: 0}}
       >
         <button className="navbar-dropdown-logout">Logout</button>
       </div>
       <div
         className="navbar-dropdown-settings-conta"
-        style={navbarDropdownSettingsContaStyle}
+        style={{cursor: 'pointer', padding: 0}}
       >
         <button className="navbar-dropdown-logout">Settings</button>
       </div>
       <div
         className="navbar-dropdown-about-containe"
-        style={navbarDropdownAboutContaineStyle}
+        style={{cursor: 'pointer', padding: 0}}
       >
         <button className="navbar-dropdown-logout">About</button>
       </div>
       <div
         className="navbar-dropdown-account-contai"
-        style={navbarDropdownAccountContaiStyle}
+        style={{cursor: 'pointer', padding: 0}}
       >
         <button className="navbar-dropdown-logout">Account</button>
       </div>

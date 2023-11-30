@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+::selection {
+    background-color: rgb(87, 124, 255);
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+    }

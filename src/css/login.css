@@ -1,13 +1,6 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0; 
-  box-sizing: border-box;
-}
-
-/* body {
+.user-login-regiser-page {
   background: url(../img/FAITH_BACKGROUND.jpg)
    top center / cover no-repeat;
   display: flex;
@@ -17,13 +10,6 @@
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
-} */
-
-h1 {
-  font-weight: 700;
-  letter-spacing: -1.5px;
-  margin: 0;
-  margin-bottom: 15px;
 }
 
 h1.title {
@@ -35,23 +21,10 @@ h1.title {
 
 .register-title {
     margin-top: 40px;
+    margin-bottom: 0px;
 }
 
-p {
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
-  letter-spacing: 1px;
-  margin: 20px 0 30px;
-  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
-}
-
-span {
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-a {
+.forgot-password {
   color: #333;
   font-size: 14px;
   text-decoration: none;
@@ -59,7 +32,7 @@ a {
   transition: 0.3s ease-in-out;
 }
 
-a:hover {
+.forgot-password:hover {
   color: #4bb6b7;
 }
 
@@ -89,7 +62,12 @@ a:hover {
   padding: 5px;
 }
 
-/* button {
+.register-button, .login-button, .goto-login-button, .goto-register-button {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.register-button, .login-button, .goto-login-button, .goto-register-button {
   position: relative;
   border-radius: 20px;
   border: 1px solid rgb(13,40,107);
@@ -103,18 +81,19 @@ a:hover {
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-} */
-
-button:hover {
-  letter-spacing: 3px;
 }
 
-button:active {
+.register-button:hover, .login-button:hover, .goto-login-button:hover, .goto-register-button:hover {
+  letter-spacing: 1px;
+}
+
+.register-button:active, .login-button:active, .goto-login-button:active, .goto-register-button:active {
   transform: scale(0.95);
 }
 
-button:focus {
-  outline: none;
+.register-button:focus, .login-button:focus, .goto-login-button:focus, .goto-register-button:focus {
+  outline:auto;
+  outline-color: rgb(76, 112, 255);
 }
 
 button.ghost {
@@ -154,22 +133,21 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
   height: 100%;
   text-align: center;
 }
 
-input {
+.email-2, .password-2, .stdnum-input, .fname-input, .lname-input, .email-input, .password-input {
   background-color: #fff;
   outline: none;
-  /* border: none; */
+  border: none;
   border-bottom: 2px solid #adadad;
   padding: 12px 0px;
   margin: 8px 0;
   width: 100%;
 }
 
-.container {
+.login-register-container {
   border-radius: 25px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 0px 10px rgba(0, 0, 0, 0.22);
   position: relative;
@@ -187,7 +165,7 @@ input {
 }
 
 .form-control {
-  width: 100%;
+  width: 75%;
   position: relative;
 }
 
@@ -216,7 +194,9 @@ input {
   font-size: 12px;
   z-index: 100;
 }
-
+#course-error {
+  top: 38px;
+}
 .form-control span {
   position: absolute;
   border-bottom: 3px solid #2691d9;
@@ -258,7 +238,7 @@ input {
   z-index: 2;
 }
 
-.container.right-panel-active .login-container {
+.login-register-container.right-panel-active .login-container {
   transform: translateX(100%);
 }
 
@@ -270,7 +250,7 @@ input {
   z-index: 1;
 }
 
-.container.right-panel-active .register-container {
+.login-register-container.right-panel-active .register-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -302,7 +282,7 @@ input {
   z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.login-register-container.right-panel-active .overlay-container {
   transform: translate(-100%);
 }
 
@@ -333,7 +313,7 @@ input {
   );
 }
 
-.container.right-panel-active .overlay {
+.login-register-container.right-panel-active .overlay {
   transform: translateX(50%);
 }
 
@@ -343,7 +323,6 @@ input {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
   text-align: center;
   top: 0;
   height: 100%;
@@ -356,7 +335,7 @@ input {
   transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.login-register-container.right-panel-active .overlay-left {
   transform: translateX(0);
 }
 
@@ -365,7 +344,6 @@ input {
   transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.login-register-container.right-panel-active .overlay-right {
   transform: translateX(20%);
 }
-

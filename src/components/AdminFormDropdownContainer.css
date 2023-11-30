@@ -1,0 +1,74 @@
+.admin-form-dropdown-delete-ico-icon {
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+.admin-form-dropdown-delete-tex {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  font-size: var(--font-size-smi);
+  font-weight: 700;
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+}
+.admin-form-dropdown-delete-lay {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+}
+.admin-form-dropdown-delete-con,
+.admin-form-dropdown-edit-conta {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  background-color: var(--color-white);
+  width: 190px;
+  height: 36px;
+  overflow: hidden;
+}
+.admin-form-dropdown-edit-conta {
+  top: 0;
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+}
+.admin-form-dropdown-container {
+  border-radius: var(--br-lg);
+  background-color: var(--color-white);
+  box-shadow: 2px 4px 4.5px -1px rgba(0, 0, 0, 0.15);
+  width: 190px;
+  height: 72px;
+  overflow: auto;
+  position: absolute;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 1200px) {
+  .admin-form-dropdown-delete-tex {
+    display: flex;
+  }
+}
+@media screen and (max-width: 960px) {
+  .admin-form-dropdown-delete-tex {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .admin-form-dropdown-delete-tex {
+    display: none;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .admin-form-dropdown-delete-tex {
+    display: none;
+  }
+}

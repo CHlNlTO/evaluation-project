@@ -1,0 +1,44 @@
+.cspl101 {
+  margin: 0;
+  font-family: var(--font-inherit);
+  font-size: var(--font-inherit);
+  padding-left: var(--padding-2xl);
+}
+.evaluation-title-,
+.settings-icon {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.evaluation-title- {
+  position: undefined;
+  font-size: var(--font-size-base);
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  height: 19px;
+  margin-left: 0;
+}
+.category-section,
+.settings-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.settings-icon-container {
+  flex: 1;
+  justify-content: flex-end;
+}
+.category-section {
+  border-radius: var(--br-11xs);
+  background-color: var(--color-gray-200);
+  width: 288px;
+  height: calc(100dvh - 380px);
+  overflow: hidden;
+  flex-shrink: 0;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: var(--gap-6xl);
+}

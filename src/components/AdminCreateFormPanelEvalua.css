@@ -1,0 +1,70 @@
+.admin-create-form-panel-evalua1:hover {
+  color: black;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+.admin-form-dropdown-edit-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  filter: invert(99%) sepia(4%) saturate(767%) hue-rotate(226deg) brightness(120%) contrast(100%);
+}
+.admin-form-dropdown-edit-icon:hover {
+  filter: invert(42%) sepia(1%) saturate(2323%) hue-rotate(356deg) brightness(89%) contrast(95%);
+}
+.admin-form-dropdown-delete-icon {
+  opacity: 1;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  filter: invert(99%) sepia(4%) saturate(767%) hue-rotate(226deg) brightness(120%) contrast(100%);
+}
+.admin-form-dropdown-delete-icon:hover {
+  filter: invert(35%) sepia(36%) saturate(6162%) hue-rotate(336deg) brightness(100%) contrast(109%);
+}
+.admin-create-form-panel-evalua-icon:hover {
+  opacity: 1;
+  position: relative;
+  width: 18px;
+  height: 21px;
+  cursor: pointer;
+}
+.admin-create-form-panel-evalua-icon {
+  position: relative;
+  width: 18px;
+  height: 21px;
+  cursor: pointer;
+  filter: invert(42%) sepia(1%) saturate(2323%) hue-rotate(356deg) brightness(89%) contrast(95%);
+}
+.admin-create-form-panel-evalua2 {
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-darkgray);
+  transition: .2s ease;
+}
+
+.admin-create-form-panel-evalua,
+.admin-create-form-panel-evalua1 {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.admin-create-form-panel-evalua1 {
+  flex: 1;
+  padding: var(--padding-4xs) 0;
+  gap: var(--gap-3xs);
+  transition: .3s;
+}
+.admin-create-form-panel-evalua {
+  height: 40px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray-100);
+  font-family: var(--font-inter);
+}

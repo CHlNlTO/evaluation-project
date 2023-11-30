@@ -1,6 +1,6 @@
 import "../css/ProfessorCardComponent.css";
 
-const ProfessorCardComponent = () => {
+const ProfessorCardComponent = ({professor}) => {
   return (
     <div className="professor-card-component">
         <div className="courses-container">
@@ -17,7 +17,7 @@ const ProfessorCardComponent = () => {
             </div>
         </div>
         <div className="professor-name-container">
-            <b className="professor-name1">Bryan Briones</b>
+            <b className="professor-name1">{professor.subjects.professors.first_name + " " + professor.subjects.professors.last_name}</b>
         </div>
     </div>
   );

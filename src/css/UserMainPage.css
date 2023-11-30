@@ -2,40 +2,7 @@
 body {
   margin: 0;
   line-height: normal;
-  overflow: hidden;
 }
-:root {
-  /* fonts */
-  --font-inter: Inter;
-  --font-inherit: inherit;
-
-  /* font sizes */
-  --font-size-xl: 20px;
-  --font-size-3xs: 10px;
-  --font-size-base: 16px;
-  --font-size-sm: 14px;
-
-  /* Colors */
-  --color-white: #fff;
-  --color-black: #000;
-  --color-midnightblue: #10135a;
-  --color-gray: rgba(255, 255, 255, 0);
-
-  /* Gaps */
-  --gap-0: 0px;
-  --gap-5xl: 24px;
-
-  /* Paddings */
-  --padding-8xs: 5px;
-  --padding-xs: 12px;
-  --padding-28xl: 47px;
-
-  /* Border radiuses */
-  --br-26xl: 45px;
-  --br-9xl: 28px;
-  --br-11xs: 2px;
-}
-
 
 .profile-container {
     position: relative;
@@ -184,7 +151,7 @@ body {
     font-size: var(--font-size-xl);
     font-weight: 700;
     font-family: var(--font-inter);
-    color: var(--color-midnightblue);
+    color: var(--color-black);
     text-align: center;
     display: flex;
     align-items: center;
@@ -290,7 +257,7 @@ body {
     gap: 98px;
   }
   .professor-list-container {
-    height: 835px;
+    height: 100dvh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -319,7 +286,7 @@ body {
     gap: 51px;
   }
   .body-inner-container {
-    height: 1024px;
+    height: 100dvh;
     justify-content: flex-end;
     margin-top: -80px;
   }
@@ -332,7 +299,7 @@ body {
   }
   .body-container {
     flex: 1;
-    height: 1024px;
+    height: 100dvh;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -348,6 +315,35 @@ body {
     font-size: var(--font-size-sm);
     color: var(--color-white);
     font-family: var(--font-inter);
+    /* fonts */
+    --font-inter: Inter;
+    --font-inherit: inherit;
+
+    /* font sizes */
+    --font-size-xl: 20px;
+    --font-size-3xs: 10px;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-midnightblue: #10135a;
+    --color-gray: rgba(255, 255, 255, 0);
+
+    /* Gaps */
+    --gap-0: 0px;
+    --gap-5xl: 24px;
+
+    /* Paddings */
+    --padding-8xs: 5px;
+    --padding-xs: 12px;
+    --padding-28xl: 47px;
+
+    /* Border radiuses */
+    --br-26xl: 45px;
+    --br-9xl: 28px;
+    --br-11xs: 2px;
   }
   @media screen and (max-width: 1200px) {
     .hamburger-menu-icon {

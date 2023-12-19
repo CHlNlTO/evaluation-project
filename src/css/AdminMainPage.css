@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-main-page {
   position: relative;
   background-color: var(--color-white);
@@ -94,7 +90,6 @@
   height: 31px;
   z-index: 0;
   cursor: pointer;
-<<<<<<< HEAD
   filter: invert(42%) sepia(1%) saturate(2323%) hue-rotate(356deg) brightness(120%) contrast(50%);
   transition: .3s ease;
 }
@@ -108,28 +103,19 @@
 .admin-evaluation-logo-icon,
 .admin-professor-logo-icon,
 .admin-subject-logo-icon {
-=======
-}
-.admin-evaluation-logo-icon,
-.admin-professor-logo-icon {
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
   position: relative;
   width: 29px;
   height: 29px;
   z-index: 0;
   cursor: pointer;
-<<<<<<< HEAD
   filter: invert(42%) sepia(1%) saturate(2323%) hue-rotate(356deg) brightness(120%) contrast(50%);
   transition: .3s ease;
-=======
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 }
 .admin-professor-logo-icon {
   height: 31px;
   z-index: 0;
   cursor: pointer;
 }
-<<<<<<< HEAD
 .admin-subject-logo-icon {
   height: 31px;
   z-index: 0;
@@ -147,8 +133,6 @@
   transition: .3s ease;
 }
 
-=======
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-settings-logo-icon {
   position: absolute;
   margin: 0 !important;
@@ -158,16 +142,12 @@
   height: 30px;
   z-index: 0;
   cursor: pointer;
-<<<<<<< HEAD
   filter: invert(42%) sepia(1%) saturate(2323%) hue-rotate(356deg) brightness(120%) contrast(50%);
   transition: .3s ease;
 }
  /* Navbar Animations */
 
 
-=======
-}
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-side-panel {
   position: absolute;
   height: 100%;
@@ -186,10 +166,6 @@
   gap: 60px;
   z-index: 10;
 }
-<<<<<<< HEAD
-=======
-.admin-navbar-about,
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-navbar-database {
   cursor: pointer;
   border: 0;
@@ -197,11 +173,7 @@
   background-color: transparent;
   position: absolute;
   top: 0;
-<<<<<<< HEAD
   right: 247px;
-=======
-  right: 449px;
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
   font-size: var(--font-size-xl);
   font-weight: 700;
   font-family: var(--font-inter);
@@ -212,12 +184,9 @@
 .admin-navbar-about {
   right: 281px;
 }
-<<<<<<< HEAD
 .admin-hamburger-menu-icon{
   display: none;
 }
-=======
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-hamburger-menu-icon,
 .frame {
   position: absolute;
@@ -319,11 +288,7 @@
   left: 44px;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   width: 420px;
-=======
-  width: 304px;
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
   height: 54px;
 }
 .admin-body-evaluation-form-sav1 {
@@ -338,11 +303,7 @@
 }
 .admin-body-evaluation-form-sav {
   cursor: pointer;
-<<<<<<< HEAD
   border: 0.1px solid var(--color-black);
-=======
-  border: 0.5px solid var(--color-black);
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
   padding: 0;
   background-color: var(--color-midnightblue);
   position: absolute;
@@ -430,12 +391,8 @@
 }
 .admin-body-evaluation-form-tab1 {
   align-self: stretch;
-<<<<<<< HEAD
   border-bottom: 0.1px solid var(--color-dimgray-100);
   border-right: 0.1px solid var(--color-dimgray-100);
-=======
-  border-bottom: 0.1px solid var(--color-black);
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
   box-sizing: border-box;
   height: 66px;
   display: flex;
@@ -451,7 +408,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-<<<<<<< HEAD
 } 
 .admin-body-evaluation-form-tab11{
   overflow-y: scroll;
@@ -462,17 +418,6 @@
   border-bottom: 0.1px solid var(--color-dimgray-100);
   overflow: hidden;
   font-size: var(--font-size-sm);
-=======
-  overflow-y: auto;
-}
-.admin-body-evaluation-form-tab {
-  background-color: var(--color-white);
-  border-right: 0.5px solid var(--color-dimgray-100);
-  border-bottom: 0.5px solid var(--color-dimgray-100);
-  overflow: hidden;
-  font-size: var(--font-size-sm);
-  display: block;
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 }
 .admin-evaluation-form-title-te {
   position: relative;
@@ -543,7 +488,6 @@
   overflow: hidden;
   flex-shrink: 0;
 }
-<<<<<<< HEAD
 .admin-statistics-central-tende {
   align-self: stretch;
   overflow: hidden;
@@ -556,8 +500,6 @@
   display: flex;
   flex-direction: column;
 }
-=======
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-body-container1,
 .admin-body-main-container {
   align-self: stretch;
@@ -566,7 +508,6 @@
   flex-direction: column;
   align-items: center;
 }
-<<<<<<< HEAD
 .admin-statistics-pie-chart-cir {
   position: relative;
   border-radius: 25%;
@@ -650,8 +591,6 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-=======
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 .admin-body-container1 {
   overflow: hidden;
   justify-content: center;

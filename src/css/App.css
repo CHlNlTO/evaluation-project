@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
     margin: 0;
     line-height: normal;
@@ -10,14 +9,4 @@ body {
 
 ::-webkit-scrollbar { 
     display: none; 
-    }
-=======
-body {
-    margin: 0;
-    line-height: normal;
 }
-
-::selection {
-    background-color: rgb(87, 124, 255);
-}
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86

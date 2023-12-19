@@ -1,7 +1,6 @@
 import "../css/UserNavbar.css";
 import { useNavigate } from "react-router-dom";
 
-<<<<<<< HEAD
 const UserNavbar = ({addNavbarDropdownComponent, setAddNavbarDropdownComponent, dropdownRef, student}) => {
 
   const navigate = useNavigate()
@@ -12,9 +11,6 @@ const UserNavbar = ({addNavbarDropdownComponent, setAddNavbarDropdownComponent, 
     navigate('/UserMainPage')
 
   }
-=======
-const UserNavbar = ({addNavbarDropdownComponent, setAddNavbarDropdownComponent, dropdownRef}) => {
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
 
     return (
     <nav className="user-navbar" ref={dropdownRef}>
@@ -25,22 +21,7 @@ const UserNavbar = ({addNavbarDropdownComponent, setAddNavbarDropdownComponent, 
       </div>
       <div className="user-navbar-list-container">
         <div className="user-navbar-list-title-contain">
-<<<<<<< HEAD
           <a href= "./UserMainPage" onClick = {toggleHome}>
-=======
-          <img
-            className="user-hamburger-menu-icon"
-            alt=""
-            src="../img/hamburger-menu1.svg" onClick={() => setAddNavbarDropdownComponent(!addNavbarDropdownComponent)}
-          />
-          <a href= "/">
-            <button className="user-navbar-profs">Profs</button>
-          </a>
-          <a href= "./Admin">
-            <button className="user-navbar-courses">Courses</button>
-          </a>
-          <a href= "./UserMainPage">
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
             <button className="user-navbar-home">Home</button>
           </a>
         </div>

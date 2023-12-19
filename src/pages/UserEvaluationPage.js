@@ -4,7 +4,6 @@ import NavbarDropdownComponent from "../components/NavbarDropdownComponent";
 import UserNavbar from "../components/UserNavbar";
 import "../css/UserEvaluationPage.css";
 import { useState, useEffect, useRef} from 'react';
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 
 const UserEvaluationPage = ({student, professorDetails, setStudent, setProfessorDetails}) => {
@@ -204,74 +203,6 @@ const UserEvaluationPage = ({student, professorDetails, setStudent, setProfessor
   return (
     <div className="user-evaluation-page">
       <UserNavbar dropdownRef = { dropdownRef } addNavbarDropdownComponent = { addNavbarDropdownComponent } setAddNavbarDropdownComponent = { setAddNavbarDropdownComponent } student = {student} />
-=======
-
-const UserEvaluationPage = () => {
-
-  const [counter, setCounter] = useState(0);
-  const [totalScore, setTotalScore] = useState(0);
-  const [submit, setSubmit] = useState(false);
-  const [toggleSubmit, setToggleSubmit] = useState(false);
-  const [storeScore, setStoreScore] = useState({})
-  const [dynamicFields, setDynamicFields] = useState([]);
-  const [addNavbarDropdownComponent, setAddNavbarDropdownComponent] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  // Function to close the dropdown
-  const closeDropdown = () => {
-    setAddNavbarDropdownComponent(false);
-  };
-
-  // Add event listeners when the component mounts
-  useEffect(() => {
-    // Function to handle clicks outside the dropdown
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        closeDropdown();
-      }
-    };
-
-    // Add event listeners
-    document.addEventListener('mousedown', handleClickOutside);
-
-    // Clean up event listeners when the component unmounts
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []); 
-
-  useEffect(() => {
-    if (counter && counter === totalScore) {
-        document.getElementById("form-submit-button-id").style.background = "#10135a";
-        setSubmit(true);
-    }
-
-  }, [counter, totalScore, submit]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (submit === false) {
-        console.log(submit, "hamburger");
-        return;
-    }
-
-    const { data , error } = await supabase
-    .from('answers')
-    .insert(dynamicFields);
-
-    if (error) {
-        console.error('Error inserting data:', error);
-      } else
-        console.log('Data inserted successfully!');
-        setDynamicFields([]);
-    
-  }
-
-  return (
-    <div className="user-evaluation-page">
-      <UserNavbar dropdownRef = { dropdownRef } addNavbarDropdownComponent = { addNavbarDropdownComponent } setAddNavbarDropdownComponent = { setAddNavbarDropdownComponent }/>
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
       <div className="form-body-evaluation-container">
         <div className="form-likert-scale-container">
           <div className="form-likert-scale-score-container">
@@ -283,11 +214,7 @@ const UserEvaluationPage = () => {
           </div>
         </div>
         <div className="form-evaluation-question-auto-">
-<<<<<<< HEAD
           {professorDetails && <FormEvaluationQuestionRadiosCo counter = {counter} setCounter = {setCounter} setTotalScore = {setTotalScore} storeScore = {storeScore} dynamicFields = {dynamicFields} setDynamicFields = {setDynamicFields} professorDetails = {professorDetails && professorDetails} student = {student} />}
-=======
-          <FormEvaluationQuestionRadiosCo counter = {counter} setCounter = {setCounter} setTotalScore = {setTotalScore} storeScore = {storeScore} dynamicFields = {dynamicFields} setDynamicFields = {setDynamicFields}/>
->>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
         </div>
       </div>
       <div className="form-professor-details-contain">

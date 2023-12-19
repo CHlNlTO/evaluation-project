@@ -1,31 +1,33 @@
 {
   "files": {
-    "main.css": "/evaluation-project/static/css/main.fbd87311.css",
-    "main.js": "/evaluation-project/static/js/main.10a05ce8.js",
+    "main.css": "/evaluation-project/static/css/main.6ce1d7ba.css",
+    "main.js": "/evaluation-project/static/js/main.dddf7835.js",
     "static/media/FAITH_BACKGROUND.jpg": "/evaluation-project/static/media/FAITH_BACKGROUND.b186a009f0461806f709.jpg",
     "static/media/faith_logo.png": "/evaluation-project/static/media/faith_logo.16433eff1c313e873a3f.png",
-    "static/media/admin-settings-logo.svg": "/evaluation-project/static/media/admin-settings-logo.c8a390980a3fcb82354e4f90b4a660f8.svg",
-    "static/media/form-profs-icon.svg": "/evaluation-project/static/media/form-profs-icon.6d734b6bd20ae84d79b53ee357add79b.svg",
+    "static/media/admin-settings-logo.svg": "/evaluation-project/static/media/admin-settings-logo.c8a390980a3fcb82354e.svg",
     "static/media/admin-evaluation-logo.svg": "/evaluation-project/static/media/admin-evaluation-logo.8440d5a5418cb4c7a65ea4728806bac8.svg",
+    "static/media/admin-subject-logo.svg": "/evaluation-project/static/media/admin-subject-logo.386c8d488c630924d6af25bd62ca0c11.svg",
     "static/media/admin-database-logo.svg": "/evaluation-project/static/media/admin-database-logo.fbf1fe55022d04dec6f5c033e47dfbc9.svg",
     "static/media/admin-body-evaluation-form-table-delete-question-container.svg": "/evaluation-project/static/media/admin-body-evaluation-form-table-delete-question-container.e79b60f2335124a5ade2b9bb8b39f297.svg",
-    "static/media/form-course-icon.svg": "/evaluation-project/static/media/form-course-icon.379d175836a37a32b6b3dc7681ab87ca.svg",
+    "static/media/admin-logout-logo.svg": "/evaluation-project/static/media/admin-logout-logo.9bc1c05af8d4b1851ffc188bfb46077e.svg",
+    "static/media/admin-logout-logo-white.svg": "/evaluation-project/static/media/admin-logout-logo-white.c343b023b2d8983ace2ec1d74781225c.svg",
     "static/media/admin-professor-logo.svg": "/evaluation-project/static/media/admin-professor-logo.aa6f49804e96f5ed163abebc4dad7dfd.svg",
-    "static/media/form-home-icon.svg": "/evaluation-project/static/media/form-home-icon.b1cadab78d7a83af9c119c408a3705c2.svg",
-    "static/media/admin-home-logo.svg": "/evaluation-project/static/media/admin-home-logo.dd79789043361b32f80aa9987d3c35e2.svg",
+    "static/media/admin-statistics-logo.svg": "/evaluation-project/static/media/admin-statistics-logo.c42eb3fb7bd876eeadcb28ae986c0c4e.svg",
+    "static/media/admin-professor-panel-logo.svg": "/evaluation-project/static/media/admin-professor-panel-logo.8a25637eba89f4182fc980225884c10c.svg",
+    "static/media/admin-form-dropdown-delete-icon.svg": "/evaluation-project/static/media/admin-form-dropdown-delete-icon.39a8edadfbd0227ffd505a0299361107.svg",
     "static/media/admin-body-evaluation-form-table-add-question-container.svg": "/evaluation-project/static/media/admin-body-evaluation-form-table-add-question-container.a6d9d5a7851de776cc7fcde8c63bb7a5.svg",
-    "static/media/form-likert-score-container.svg": "/evaluation-project/static/media/form-likert-score-container.8223d13e7ba76078d7578ca54992141d.svg",
     "index.html": "/evaluation-project/index.html",
     "static/media/admin-create-form-panel-evaluation-forms-logo.svg": "/evaluation-project/static/media/admin-create-form-panel-evaluation-forms-logo.f21463fbb5646e99f529b0865076df3c.svg",
+    "static/media/admin-form-dropdown-edit-icon.svg": "/evaluation-project/static/media/admin-form-dropdown-edit-icon.81b5edaf4a24551964105c9e14ddacac.svg",
     "static/media/admin-create-form-panel-add-button-logo.svg": "/evaluation-project/static/media/admin-create-form-panel-add-button-logo.dc7fdf4ceda5c8ab150c484a6d53fe96.svg",
-    "static/media/hamburger-menu1.svg": "/evaluation-project/static/media/hamburger-menu1.5aa914ebf7206cf7fa7300d1a0763c41.svg",
     "static/media/admin-create-form-panel-form-search-bar-logo.svg": "/evaluation-project/static/media/admin-create-form-panel-form-search-bar-logo.4c1869b2263634a603be73dea3301a74.svg",
-    "static/media/back-arrow.svg": "/evaluation-project/static/media/back-arrow.8c7929e5ee075204b810bcaf1959629c.svg",
-    "main.fbd87311.css.map": "/evaluation-project/static/css/main.fbd87311.css.map",
-    "main.10a05ce8.js.map": "/evaluation-project/static/js/main.10a05ce8.js.map"
+    "static/media/admin-add-subject-modal-course-dropdown-arrow-container.svg": "/evaluation-project/static/media/admin-add-subject-modal-course-dropdown-arrow-container.d227d8907e3122c457761bbd12232c62.svg",
+    "static/media/admin-select-form-arrow-container.svg": "/evaluation-project/static/media/admin-select-form-arrow-container.3454244030acbb675d886e995d3d4a2d.svg",
+    "main.6ce1d7ba.css.map": "/evaluation-project/static/css/main.6ce1d7ba.css.map",
+    "main.dddf7835.js.map": "/evaluation-project/static/js/main.dddf7835.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbd87311.css",
-    "static/js/main.10a05ce8.js"
+    "static/css/main.6ce1d7ba.css",
+    "static/js/main.dddf7835.js"
   ]
 }

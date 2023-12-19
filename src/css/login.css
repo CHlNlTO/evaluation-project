@@ -194,9 +194,7 @@ form {
   font-size: 12px;
   z-index: 100;
 }
-#course-error {
-  top: 38px;
-}
+
 .form-control span {
   position: absolute;
   border-bottom: 3px solid #2691d9;

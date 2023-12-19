@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 body {
   margin: 0;
@@ -486,4 +487,492 @@ body {
       height: 88px;
     }
   }
+=======
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.profile-container {
+    position: relative;
+    border-radius: 50%;
+    background-color: var(--color-midnightblue);
+    border: 5px solid var(--color-white);
+    box-sizing: border-box;
+    width: 138px;
+    height: 138px;
+  }
+  .user-name {
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+  }
+  .student-number,
+  .user-name {
+    position: relative;
+  }
+  .user-details-section {
+    border-radius: var(--br-11xs);
+    background-color: var(--color-gray);
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    box-sizing: border-box;
+    gap: 18px;
+  }
+  .cspl101 {
+    margin: 0;
+    font-family: var(--font-inherit);
+    font-size: var(--font-inherit);
+    padding-left: 21px;
+  }
+  .evaluation-title-,
+  .settings-icon {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .evaluation-title- {
+    position: undefined;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    height: 19px;
+    margin-left: 0;
+  }
+  .settings-icon {
+    position: relative;
+    width: 37px;
+    height: 37px;
+    background-image: url(../img/settings_icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .category-section,
+  .settings-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .settings-icon-container {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .category-section {
+    border-radius: var(--br-11xs);
+    background-color: var(--color-gray);
+    width: 250px;
+    height: 420px;
+    overflow: hidden;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    padding: 22px 23px;
+    box-sizing: border-box;
+    gap: 25px;
+  }
+  .category-section-container,
+  .user-side-panel {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .category-section-container {
+    height: 644px;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: var(--font-size-base);
+  }
+  .user-side-panel {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--color-midnightblue);
+    flex-direction: column;
+    max-width: 250px;
+    min-height: 100vh;
+  }
+  .user-side-panel-1 {
+    background-color: var(--color-midnightblue);
+    flex-direction: column;
+    max-width: 250px;
+    min-height: 100vh;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .hamburger-menu-icon {
+    position: absolute;
+    top: 22px;
+    right: 36.4px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: none;
+    border: 0;
+  }
+  .navbar-courses,
+  .navbar-home,
+  .navbar-profs {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 30.4px;
+    right: 77px;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 88.9px;
+    height: 20.9px;
+  }
+  .navbar-courses,
+  .navbar-home {
+    right: 227px;
+    width: 128.7px;
+  }
+  .navbar-home {
+    right: 416.7px;
+    width: 82.3px;
+  }
+  .navbar-list-container {
+    flex: 1;
+    position: relative;
+    height: 80px;
+    z-index: 0;
+  }
+  .navbar-title {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    margin: 0 !important;
+    top: 19px;
+    left: 67px;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 203px;
+    height: 42px;
+    flex-shrink: 0;
+    z-index: 0;
+  }
+  .navbar-container,
+  .navbar-title-container {
+    height: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .navbar-title-container {
+    margin: 0 !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 576px;
+    flex-direction: column;
+    padding: 0 67px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .navbar-container {
+    align-self: stretch;
+    background-color: var(--color-white);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    position: relative;
+    z-index: 100;
+  }
+  .college-department {
+    position: absolute;
+    top: 37px;
+    left: calc(50% - 299px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 597px;
+  }
+  .college-deparment-container {
+    align-self: stretch;
+    position: relative;
+    background-color: var(--color-white);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 98px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: var(--font-size-xl);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+  .professor-components-container {
+    align-self: stretch;
+    height: 781px;
+    /* overflow: hidden; */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 98px;
+  }
+  .professor-list-container {
+    height: 835px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 130px 123px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: var(--font-size-3xs);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+    z-index: 1;
+  }
+  .body-container1,
+  .body-inner-container {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .body-container1 {
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 51px;
+  }
+  .body-inner-container {
+    height: 1024px;
+    justify-content: flex-end;
+    margin-top: -80px;
+  }
+  .body-container,
+  .body-inner-container,
+  .user-main-page {
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+  }
+  .body-container {
+    flex: 1;
+    height: 1024px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .user-main-page {
+    position: relative;
+    background-color: #f8f8f8;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    /* fonts */
+    --font-inter: Inter;
+    --font-inherit: inherit;
+
+    /* font sizes */
+    --font-size-xl: 20px;
+    --font-size-3xs: 10px;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-midnightblue: #10135a;
+    --color-gray: rgba(255, 255, 255, 0);
+
+    /* Gaps */
+    --gap-0: 0px;
+    --gap-5xl: 24px;
+
+    /* Paddings */
+    --padding-8xs: 5px;
+    --padding-xs: 12px;
+    --padding-28xl: 47px;
+
+    /* Border radiuses */
+    --br-26xl: 45px;
+    --br-9xl: 28px;
+    --br-11xs: 2px;
+  }
+  @media screen and (max-width: 1200px) {
+    .hamburger-menu-icon {
+      display: none;
+    }
+    .navbar-courses,
+    .navbar-home,
+    .navbar-list-container,
+    .navbar-profs {
+      display: flex;
+    }
+    .user-main-page {
+      flex-direction: row;
+      gap: var(--gap-0);
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .user-side-panel, .user-side-panel-1 {
+      display: none;
+    }
+    .hamburger-menu-icon {
+      display: flex;
+    }
+    .navbar-courses,
+    .navbar-home,
+    .navbar-profs {
+      display: none;
+    }
+    .navbar-list-container {
+      display: flex;
+    }
+    .navbar-container {
+      flex-direction: row;
+      gap: var(--gap-0);
+      align-items: center;
+      justify-content: center;
+    }
+    .college-department {
+      font-size: 18px;
+      width: 597px;
+    }
+    .college-deparment-container {
+      height: 98px;
+    }
+    .professor-list-container {
+        padding: 0;
+    }
+    .professor-components-container,
+    .user-main-page {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .professor-components-container {
+      gap: 40px;
+    }
+    .user-main-page {
+      gap: var(--gap-0);
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .user-side-panel, .user-side-panel-1 {
+      display: none;
+    }
+    .hamburger-menu-icon {
+      display: flex;
+    }
+    .navbar-courses,
+    .navbar-home,
+    .navbar-profs,
+    .navbar-title {
+      display: none;
+    }
+    .navbar-container {
+      flex-direction: row;
+      gap: var(--gap-0);
+      align-items: center;
+      justify-content: center;
+    }
+    .college-department {
+      font-size: var(--font-size-3xs);
+    }
+    .college-deparment-container {
+      height: 100px;
+    }
+    .professor-components-container {
+      flex-direction: row;
+      gap: 90px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .hamburger-menu-icon {
+      display: flex;
+    }
+    .navbar-title {
+      text-align: center;
+      display: flex;
+    }
+    .college-department,
+    .navbar-title {
+      font-size: var(--font-size-base);
+    }
+    .professor-list-container {
+        padding: 0;
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    .user-side-panel, .user-side-panel-1 {
+      display: none;
+    }
+    .hamburger-menu-icon {
+      display: flex;
+    }
+    .navbar-courses,
+    .navbar-home,
+    .navbar-profs {
+      display: none;
+    }
+    .professor-list-container {
+        padding: 0;
+    }
+  }
+  @media screen and (max-width: 340px) {
+    .navbar-title {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .college-department {
+      font-size: var(--font-size-3xs);
+      display: flex;
+    }
+    .college-deparment-container {
+      height: 88px;
+    }
+  }
+>>>>>>> 8a25c24a465c946ccc3eb2912e5b019c09cc4c86
   

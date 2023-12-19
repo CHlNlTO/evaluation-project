@@ -18,15 +18,15 @@ const FormQuestionComponent = ({question, number, counter, setCounter, storeScor
     console.log(dynamicFields);
   }, [count, dynamicFields]);
 
-    const incrementCountOnce = () => {
-      if (!hasIncrementedRef.current) {
-        hasIncrementedRef.current = true;
-        if (count === 0) {
-          setCount(prevCount => prevCount + 1);
-          setCounter(counter => counter + 1);
-        }
+  const incrementCountOnce = () => {
+    if (!hasIncrementedRef.current) {
+      hasIncrementedRef.current = true;
+      if (count === 0) {
+        setCount(prevCount => prevCount + 1);
+        setCounter(counter => counter + 1);
       }
-    };
+    }
+  };
 
     const onChangeValue = (event) => {
       const score = event.target.id;

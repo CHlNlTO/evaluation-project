@@ -1,0 +1,24 @@
+.admin-select-form-title {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50% - 7.1px);
+  left: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+}
+.admin-select-form-title-contai {
+  align-self: stretch;
+  position: relative;
+  background-color: var(--color-white);
+  border-bottom: 0.01px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 40.2px;
+  cursor: pointer;
+}

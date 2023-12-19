@@ -6,7 +6,7 @@ import RegisterCourseDropdownConta from "../components/RegisterCourseDropdownCon
 import RegisterCourseDropdownList from "../components/RegisterCourseDropdownList";
 
 
-const Login = ({ handleLogin, user, setUser, roleId, setRoleId }) => {   
+const Login = ({ handleLogin, setUser, setRoleId }) => {   
 
     // Switch from Login to Register Logic
     const [isClicked, setIsClicked] = useState(false);
@@ -75,6 +75,7 @@ const Login = ({ handleLogin, user, setUser, roleId, setRoleId }) => {
             setUser(data[0].user_id);
             setRoleId(data[0].role_id);
             handleLogin();
+            console.log("afdsadfasfasfsafsaget",data)
           } else {
             setPasswordError('Wrong email or password');
             console.log(data);

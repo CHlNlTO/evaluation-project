@@ -4,38 +4,35 @@ import UserSidePanel from "../components/UserSidePanel";
 import supabase from "../config/supabaseClient";
 import { useState, useEffect } from "react";
 
-const UserMainPage = ({student}) => {
+const UserMainPage = ({student, toggleEvaluationForm, handleLogout}) => {
 
-  const [professors, setProfessors] = useState(null)
+  const [studentDetails, setStudentDetails] = useState(null)
   const [fetchError, setFetchError] = useState(null)
+  const [professors, setProfessors] = useState(null)
 
   useEffect(() => {
 
-    const getProfessors = async () => {
+    const getStudentDetails = async () => {
       try {
   
         const { data, error } = await supabase
-        .from('enrollees')
+        .from('subjects')
         .select(
-          `enrollee_id,
-          subjects(subject_id, subject_name, professors(professor_id, first_name, last_name), evaluations(evaluation_id, evaluation_title))
-          `
+          `*, courses(course_name), subject_name, professors(first_name, last_name), evaluations(evaluation_title) `
         )
-        .eq('student_id', 1)
+        .eq('course_id', student.course_id)
   
         console.log("Fetched Data: ", data)
   
         if (error) {
           console.log("Fetch Error: ", error)
           setFetchError('No data found.')
-          setProfessors(null)
+          setStudentDetails(null)
           throw error;
+        } else {
+          setStudentDetails(data);
+          setFetchError(null)
         }
-  
-        setProfessors(data);
-        setFetchError(null)
-        console.log("Set Professors: ", professors);
-  
       } catch (error) {
         console.error('Error fetching data:', error.message);
       }
@@ -43,27 +40,44 @@ const UserMainPage = ({student}) => {
     };
 
     if (student) {
-      getProfessors();
+      getStudentDetails();
     }
       
   }, [student])
 
+  const [studentComponent, setStudentComponent] = useState(null)
+
+  useEffect(() => {
+    if (student && studentDetails) {
+      const flattenedStudentDetails = studentDetails.map((studentDetail) => ({
+        student_id: student.student_id,
+        subject_id: studentDetail.subject_id,
+        subject_name: studentDetail.subject_name,
+        course_id: studentDetail.course_id,
+        course_name: studentDetail.courses.course_name,
+        professor_id: studentDetail.professor_id,
+        professor_name: studentDetail.professors.first_name + ' ' + studentDetail.professors.last_name,
+        evaluation_id: studentDetail.evaluation_id,
+        evaluation_title: studentDetail.evaluations.evaluation_title,
+      }));
   
+      setStudentComponent(flattenedStudentDetails.length > 0 ? flattenedStudentDetails : null);
+    }
+  }, [student, studentDetails]);
+
+  useEffect(() => {
+    console.log("Student Component: ", studentComponent)
+  }, [studentComponent])
+
+  const uniqueProfessorIds = new Set();
 
   return (
     <div className="user-main-page">
-      <UserSidePanel student = {student} />
+      <UserSidePanel student = {student} handleLogout = {handleLogout} />
       <main className="body-container" id="main">
         <div className="navbar-container">
-          <div className="navbar-list-container">
-            <img
-              className="hamburger-menu-icon" src="/img/hamburger_menu.png" alt="menu"/>
-            <button className="navbar-profs">Profs</button>
-            <button className="navbar-courses">Courses</button>
-            <button className="navbar-home">{`Home          `}</button>
-          </div>
           <div className="navbar-title-container">
-            <button className="navbar-title">EVALUATION FORM</button>
+            <button className="navbar-title">EVALUATION FORMS</button>
           </div>
         </div>
         <section className="body-inner-container" id="professors_cotainer">
@@ -76,11 +90,19 @@ const UserMainPage = ({student}) => {
             <section className="professor-list-container">
               {fetchError && (<p>{fetchError}</p>)}
               
-              {professors && (
+              {studentComponent && (
                 <> 
-                  {professors.map(professor => (
-                      <ProfessorCardComponent professor = {professor} />
-                  ))}
+                  {studentComponent.map((studComp) => {
+                    const professorId = studComp.professor_id;
+
+                    if (professorId && !uniqueProfessorIds.has(professorId)) {
+                      uniqueProfessorIds.add(professorId);
+
+                      return <ProfessorCardComponent key={professorId} studComp = {studComp} studentComponent = {studentComponent} toggleEvaluationForm = {toggleEvaluationForm} />;
+                    }
+
+                    return null;
+                  })}
                 </>
               )}
             </section>

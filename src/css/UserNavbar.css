@@ -51,6 +51,7 @@
   right: 0;
   width: 22px;
   height: 15px;
+  cursor: pointer;
 }
 .user-navbar-courses,
 .user-navbar-home,
@@ -74,7 +75,7 @@
   right: 270px;
 }
 .user-navbar-home {
-  right: 451px;
+  right: 260px;
 }
 .user-navbar-list-title-contain {
   position: absolute;

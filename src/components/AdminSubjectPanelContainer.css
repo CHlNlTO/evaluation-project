@@ -1,0 +1,207 @@
+.admin-create-form-panel-title {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 34px;
+  left: 44px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+}
+.admin-create-form-panel-title- {
+  align-self: stretch;
+  position: relative;
+  border-bottom: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 92.1px;
+  overflow-y: hidden;
+  flex-shrink: 0;
+}
+.admin-create-form-panel-add-bu-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+.admin-create-form-panel-add-bu2 {
+  position: relative;
+  font-size: var(--font-size-smi);
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 166px;
+  height: 23px;
+  flex-shrink: 0;
+  padding-left: 18.5px;
+}
+.admin-create-form-panel-add-bu1 {
+  position: absolute;
+  height: calc(100% - 7.2px);
+  top: 3px;
+  bottom: 4.2px;
+  left: 11.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.admin-create-form-panel-add-bu:hover {
+  background-color: #f4f4f4;
+  transition: .25s ease-in;
+}
+
+.admin-create-form-panel-add-bu {
+  cursor: pointer;
+  border: 0.1px solid var(--color-dimgray-100);
+  padding: 0;
+  background-color: var(--color-white);
+  align-self: stretch;
+  position: relative;
+  border-radius: var(--br-7xs);
+  box-shadow: 2px 2px 8.4px -2px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  height: 37.2px;
+  overflow-y: hidden;
+  flex-shrink: 0;
+}
+.admin-create-form-panel-search1,
+.admin-create-form-panel-search2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.admin-create-form-panel-search2 {
+  border: 0;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-smi);
+  background-color: transparent;
+  align-self: stretch;
+  flex: 1;
+  overflow-y: hidden;
+  outline: none;
+  cursor: text;
+}
+.admin-create-form-panel-search2:focus {
+  outline: auto;
+  outline-offset: 2px;
+  outline-color: black;
+  border: #525252;
+}
+.admin-create-form-panel-search1 {
+  position: absolute;
+  height: calc(100% - 7.2px);
+  width: calc(100% - 22.2px);
+  top: 3px;
+  right: 11.2px;
+  bottom: 4.2px;
+  left: 11px;
+  gap: var(--gap-mini);
+}
+.admin-create-form-panel-search {
+  align-self: stretch;
+  position: relative;
+  border-radius: var(--br-7xs);
+  background-color: #fafafa;
+  box-shadow: 2px 2px 8.4px -2px rgba(0, 0, 0, 0.25);
+  border: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  height: 37.2px;
+  overflow-y: hidden;
+  flex-shrink: 0;
+}
+.admin-create-form-panel-button {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-2xl);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  gap: var(--gap-smi);
+}
+.admin-create-form-panel-forms-2 {
+  position: relative;
+  font-weight: 500;
+  color: #525252;
+}
+.admin-create-form-panel-forms-1 {
+  align-self: stretch;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-2xl);
+}
+.admin-create-form-panel-contai,
+.admin-create-form-panel-evalua3,
+.admin-create-form-panel-forms-,
+.admin-create-form-panel-evaluation-list-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+.admin-create-form-panel-evaluation-list-container {
+  overflow-y: auto;
+}
+.admin-create-form-panel-evalua3 {
+
+  padding: 0 var(--padding-2xl);
+  font-size: var(--font-size-base);
+  overflow: auto;
+}
+.admin-create-form-panel-contai,
+.admin-create-form-panel-forms- {
+  gap: var(--gap-4xs);
+}
+.admin-create-form-panel-contai{
+  background-color: var(--color-white);
+  border-right: 0.1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 324px;
+  align-items: center;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-dimgray-100);
+  font-family: var(--font-inter);
+}
+.admin-create-form-panel-contai.active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: .3s ease;
+
+}
+.admin-create-form-panel-contai.inactive {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: .3s ease;
+
+}
+@media screen and (max-width: 960px) {
+  .admin-create-form-panel-contai {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .admin-create-form-panel-contai {
+    display: none;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .admin-create-form-panel-contai {
+    display: none;
+  }
+}

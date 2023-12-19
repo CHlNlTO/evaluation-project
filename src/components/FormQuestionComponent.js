@@ -3,12 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import React from "react";
 
 
-const FormQuestionComponent = ({question, number, counter, setCounter, storeScore, dynamicFields, setDynamicFields}) => {
+const FormQuestionComponent = ({question, number, counter, setCounter, storeScore, dynamicFields, setDynamicFields, professorDetails, student}) => {
 
   const question_id = question.question_id;
   const question_number = question.question_number;
-  const student_id = 1;
-  const subject_id = 1;
+  const student_id = student && student.student_id;
+  const subject_id = professorDetails && professorDetails.subject_id;
   
   const [count, setCount] = useState(0);
   const hasIncrementedRef = useRef(false);
@@ -18,31 +18,36 @@ const FormQuestionComponent = ({question, number, counter, setCounter, storeScor
     console.log(dynamicFields);
   }, [count, dynamicFields]);
 
-  const incrementCountOnce = () => {
-    if (!hasIncrementedRef.current) {
-      hasIncrementedRef.current = true;
-      if (count === 0) {
-        setCount(prevCount => prevCount + 1);
-        setCounter(counter => counter + 1);
+    const incrementCountOnce = () => {
+      if (!hasIncrementedRef.current) {
+        hasIncrementedRef.current = true;
+        if (count === 0) {
+          setCount(prevCount => prevCount + 1);
+          setCounter(counter => counter + 1);
+        }
       }
-    }
-  };
+    };
 
-  const onChangeValue = (event) =>  {
-    var score = event.target.id;
-    const answer_score = Number(score)
-    const updatedFields = [...dynamicFields.slice(0, number), {
-        question_id,
-        subject_id,
-        student_id,
-        answer_score,
-      }, ...dynamicFields.slice(number + 1)];
-    setDynamicFields(updatedFields);
-  }
+    const onChangeValue = (event) => {
+      const score = event.target.id;
+      const answer_score = Number(score);
+    
+      setDynamicFields((prevDynamicFields) => {
+        const updatedFields = [...prevDynamicFields];
+        updatedFields[number-1] = {
+          question_id,
+          subject_id,
+          student_id,
+          answer_score,
+          question_number,
+        };
+        return updatedFields;
+      });
+    };
 
   return (
       <div className="form-question-component">
-        <div className="form-likert-score-container" id = {question.question_order}>
+        <div className="form-likert-score-container" id = {question.question_number}>
             <input className="form-likert-scale-1" id = "1" onClick = {incrementCountOnce} onChange={onChangeValue} number = {number} key = "1" name={question.question_id} required={true} type="radio" />
             <input className="form-likert-scale-2" id = "2" onClick = {incrementCountOnce} onChange={onChangeValue} number = {number} key = "2" name={question.question_id} required={true} type="radio" />
             <input className="form-likert-scale-3" id = "3" onClick = {incrementCountOnce} onChange={onChangeValue} number = {number} key = "3" name={question.question_id} required={true} type="radio" />

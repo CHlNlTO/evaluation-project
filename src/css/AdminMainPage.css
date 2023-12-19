@@ -98,11 +98,12 @@
   filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 .admin-evaluation-logo-icon:hover,
-.admin-professor-logo-icon:hover, .admin-settings-logo-icon:hover {
+.admin-professor-logo-icon:hover, .admin-subject-logo-icon:hover, .admin-settings-logo-icon:hover {
   filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 .admin-evaluation-logo-icon,
-.admin-professor-logo-icon {
+.admin-professor-logo-icon,
+.admin-subject-logo-icon {
   position: relative;
   width: 29px;
   height: 29px;
@@ -116,6 +117,23 @@
   z-index: 0;
   cursor: pointer;
 }
+.admin-subject-logo-icon {
+  height: 31px;
+  z-index: 0;
+  cursor: pointer;
+}
+.admin-statistics-logo-icon:hover {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+.admin-statistics-logo-icon {
+  position: relative;
+  height: 29px;
+  z-index: 0;
+  cursor: pointer;
+  filter: invert(42%) sepia(1%) saturate(2323%) hue-rotate(356deg) brightness(120%) contrast(50%);
+  transition: .3s ease;
+}
+
 .admin-settings-logo-icon {
   position: absolute;
   margin: 0 !important;
@@ -129,9 +147,7 @@
   transition: .3s ease;
 }
  /* Navbar Animations */
-.admin-evaluation-logo-icon:hover {
-  
-}
+
 
 .admin-side-panel {
   position: absolute;
@@ -151,7 +167,6 @@
   gap: 60px;
   z-index: 10;
 }
-.admin-navbar-about,
 .admin-navbar-database {
   cursor: pointer;
   border: 0;
@@ -159,7 +174,7 @@
   background-color: transparent;
   position: absolute;
   top: 0;
-  right: 449px;
+  right: 247px;
   font-size: var(--font-size-xl);
   font-weight: 700;
   font-family: var(--font-inter);
@@ -289,7 +304,7 @@
 }
 .admin-body-evaluation-form-sav {
   cursor: pointer;
-  border: 0.5px solid var(--color-black);
+  border: 0.1px solid var(--color-black);
   padding: 0;
   background-color: var(--color-midnightblue);
   position: absolute;
@@ -400,8 +415,8 @@
 }
 .admin-body-evaluation-form-tab {
   background-color: var(--color-white);
-  border-right: 0.5px solid var(--color-dimgray-100);
-  border-bottom: 0.5px solid var(--color-dimgray-100);
+  border-right: 0.1px solid var(--color-dimgray-100);
+  border-bottom: 0.1px solid var(--color-dimgray-100);
   overflow: hidden;
   font-size: var(--font-size-sm);
 }
@@ -474,6 +489,18 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+.admin-statistics-central-tende {
+  align-self: stretch;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+}
+.admin-statistics-central-tende {
+  flex: 1;
+  border-right: 0.1px solid var(--color-dimgray-100);
+  display: flex;
+  flex-direction: column;
+}
 .admin-body-container1,
 .admin-body-main-container {
   align-self: stretch;
@@ -481,6 +508,89 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.admin-statistics-pie-chart-cir {
+  position: relative;
+  border-radius: 25%;
+  background-color: white;
+  width: 206px;
+  height: 205px;
+}
+.admin-statistics-pie-chart-lay {
+  flex: 1;
+  height: 284px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 var(--padding-3xs) 0 0;
+  box-sizing: border-box;
+}
+.admin-statistics-pie-chart-dat {
+  width: 250px;
+  height: 284px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.admin-statistics-pie-chart-con {
+  align-self: stretch;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100dvh;
+  padding-top: 50px;
+}
+.admin-statistics-bar-graph-rec {
+  position: relative;
+  background-color: var(--color-gainsboro-200);
+  width: 313px;
+  height: 186px;
+}
+.admin-statistics-pie-chart-lay1,
+.alt-admin-statistics-pie-chart {
+  flex: 1;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.admin-statistics-pie-chart-lay1 {
+  height: 284px;
+  display: flex;
+}
+.alt-admin-statistics-pie-chart {
+  align-self: stretch;
+}
+.admin-statistics-graphs-layout {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.admin-statistics-graphs-contai {
+  align-self: stretch;
+  flex: 1;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.admin-statistics-body-containe {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .admin-body-container1 {
   overflow: hidden;

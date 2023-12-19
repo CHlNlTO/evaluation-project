@@ -1,7 +1,7 @@
 .cspl101 {
   margin: 0;
   font-family: var(--font-inherit);
-  font-size: var(--font-inherit);
+  font-size: 12px;
   padding-left: var(--padding-2xl);
 }
 .evaluation-title-,
@@ -40,5 +40,5 @@
   flex-shrink: 0;
   justify-content: center;
   box-sizing: border-box;
-  gap: var(--gap-6xl);
+  gap: 11px;
 }

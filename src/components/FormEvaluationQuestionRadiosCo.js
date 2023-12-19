@@ -3,7 +3,7 @@ import { useEffect, useState} from 'react'
 import FormQuestionComponent from "./FormQuestionComponent";
 import "../css/FormEvaluationQuestionRadiosCo.css";
 
-const FormEvaluationQuestionRadiosCo = ({counter, setCounter, incrementCountOnce, setTotalScore, storeScore, dynamicFields, setDynamicFields}) => {
+const FormEvaluationQuestionRadiosCo = ({counter, setCounter, incrementCountOnce, setTotalScore, storeScore, dynamicFields, setDynamicFields, student, professorDetails}) => {
 
     const [fetchError, setFetchError] = useState(null)
     const [questions, setQuestions] = useState(null)
@@ -15,7 +15,7 @@ const FormEvaluationQuestionRadiosCo = ({counter, setCounter, incrementCountOnce
             .from('questions')
             .select()
             .order('question_number', { ascending: true })
-            .eq("evaluation_id", 27);
+            .eq("evaluation_id", professorDetails && professorDetails.evaluation_id);
 
             if (error) {    
                 setFetchError('No data found.')
@@ -50,7 +50,10 @@ const FormEvaluationQuestionRadiosCo = ({counter, setCounter, incrementCountOnce
                         incrementCountOnce = {incrementCountOnce} 
                         storeScore = {storeScore} 
                         dynamicFields = {dynamicFields}
-                        setDynamicFields = {setDynamicFields} />
+                        setDynamicFields = {setDynamicFields}
+                        student = {student} 
+                        professorDetails= {professorDetails}
+                        />
                 ))}
             </div>
         )}

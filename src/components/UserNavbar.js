@@ -1,28 +1,27 @@
 import "../css/UserNavbar.css";
+import { useNavigate } from "react-router-dom";
 
-const UserNavbar = ({addNavbarDropdownComponent, setAddNavbarDropdownComponent, dropdownRef}) => {
+const UserNavbar = ({addNavbarDropdownComponent, setAddNavbarDropdownComponent, dropdownRef, student}) => {
+
+  const navigate = useNavigate()
+
+  const toggleHome = () => {
+
+    window.localStorage.removeItem('flag')
+    navigate('/UserMainPage')
+
+  }
 
     return (
     <nav className="user-navbar" ref={dropdownRef}>
       <div className="user-student-details-container">
-        <button className="user-student-name">Clark Wayne Abutal</button>
+        <button className="user-student-name">{student && student.first_name + " " + student &&  student.last_name}</button>
         <div className="user-separator" />
-        <button className="user-student-number">S2021100408</button>
+        <button className="user-student-number">{student && student.student_number}</button>
       </div>
       <div className="user-navbar-list-container">
         <div className="user-navbar-list-title-contain">
-          <img
-            className="user-hamburger-menu-icon"
-            alt=""
-            src="../img/hamburger-menu1.svg" onClick={() => setAddNavbarDropdownComponent(!addNavbarDropdownComponent)}
-          />
-          <a href= "/">
-            <button className="user-navbar-profs">Profs</button>
-          </a>
-          <a href= "./Admin">
-            <button className="user-navbar-courses">Courses</button>
-          </a>
-          <a href= "./UserMainPage">
+          <a href= "./UserMainPage" onClick = {toggleHome}>
             <button className="user-navbar-home">Home</button>
           </a>
         </div>

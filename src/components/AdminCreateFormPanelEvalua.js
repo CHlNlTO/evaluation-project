@@ -17,7 +17,7 @@ const AdminCreateFormPanelEvalua = ({form, setForm, toggleEvalBody, refresh, tog
   },[form])
 
   const toggleDeleteForm = () => {
-    const confirm = window.confirm(`Delete ${form.evaluation_title}?` );
+    const confirm = window.confirm(`Remove ${form.evaluation_title}?` );
 
     if (confirm) {
       deleteForm();
@@ -26,19 +26,33 @@ const AdminCreateFormPanelEvalua = ({form, setForm, toggleEvalBody, refresh, tog
   }
 
   const deleteForm = async () => {
-      const { error: errorForm } = await supabase
-        .from("evaluations")
-        .delete()
-        .eq("evaluation_id", form.evaluation_id);
-        
-      if (errorForm) {
-        console.log("Error deleting form: ", errorForm.message)
+
+    const { data, error } = await supabase
+        .from("archive_evaluations")
+        .upsert(form)
+      
+      if (error) {
+        console.log("Error inserting form into archives: ", error.message)
         return;
       }
-      console.log("Succesfully deleted form.")
-      window.alert("Form succesfully deleted");
-      refresh();
+
+      if (data) {
+        console.log("Successfully inserted form into archives: ", data)
+      }
+
+    const { error: errorForm } = await supabase
+      .from("evaluations")
+      .delete()
+      .eq("evaluation_id", form.evaluation_id);
+      
+    if (errorForm) {
+      console.log("Error archiving form: ", errorForm.message)
+      return;
     }
+    console.log("Succesfully archived form.")
+    window.alert("Form succesfully removed.");
+    refresh();
+  }
 
 
   return (

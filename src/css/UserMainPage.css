@@ -39,7 +39,7 @@ body {
   .cspl101 {
     margin: 0;
     font-family: var(--font-inherit);
-    font-size: var(--font-inherit);
+    font-size: 10px;
     padding-left: 21px;
   }
   .evaluation-title-,
@@ -50,8 +50,7 @@ body {
     background-color: transparent;
   }
   .evaluation-title- {
-    position: undefined;
-    font-size: var(--font-size-sm);
+    font-size: 10px;
     font-family: var(--font-inter);
     color: var(--color-white);
     text-align: left;
@@ -63,7 +62,6 @@ body {
     position: relative;
     width: 37px;
     height: 37px;
-    background-image: url(../img/settings_icon.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -88,7 +86,7 @@ body {
     justify-content: flex-start;
     padding: 22px 23px;
     box-sizing: border-box;
-    gap: 25px;
+    gap: 15px;
   }
   .category-section-container,
   .user-side-panel {
@@ -179,19 +177,19 @@ body {
     border: 0;
     padding: 0;
     background-color: transparent;
-    position: absolute;
+    position: relative;
     margin: 0 !important;
-    top: 19px;
-    left: 67px;
+    /* top: 19px; */
+    /* left: 67px; */
     font-size: var(--font-size-xl);
     font-weight: 700;
     font-family: var(--font-inter);
     color: var(--color-black);
     text-align: center;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    width: 203px;
+    /* width: 203px; */
     height: 42px;
     flex-shrink: 0;
     z-index: 0;
@@ -205,14 +203,14 @@ body {
   }
   .navbar-title-container {
     margin: 0 !important;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 576px;
     flex-direction: column;
     padding: 0 67px;
     box-sizing: border-box;
     z-index: 1;
+    display: flex;
+    align-items: center;
   }
   .navbar-container {
     align-self: stretch;
@@ -221,6 +219,9 @@ body {
     flex-direction: row;
     position: relative;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .college-department {
     position: absolute;
@@ -264,13 +265,14 @@ body {
     align-items: flex-start;
     justify-content: center;
     gap: 100px;
-    padding: 0 130px 123px;
+    padding: 70px 130px 123px;
     box-sizing: border-box;
     text-align: center;
     font-size: var(--font-size-3xs);
     color: var(--color-black);
     font-family: var(--font-inter);
     z-index: 1;
+    overflow-y: scroll;
   }
   .body-container1,
   .body-inner-container {
@@ -283,7 +285,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 51px;
+    overflow: hidden;
   }
   .body-inner-container {
     height: 100dvh;

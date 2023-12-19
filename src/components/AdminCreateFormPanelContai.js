@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import supabase from "../config/supabaseClient";
 
 
-const AdminCreateFormPanelContai = ({ evalPanel, toggleCreatePanel, setForm, toggleEvalBody, refreshForms, refresh, toggleEditFormPanel }) => {
+const AdminCreateFormPanelContai = ({ evalPanel, toggleCreatePanel, setForm, toggleEvalBody, refreshForms, refresh, toggleEditFormPanel}) => {
 
   const [fade, setFade] = useState(false);
 
@@ -42,7 +42,7 @@ const AdminCreateFormPanelContai = ({ evalPanel, toggleCreatePanel, setForm, tog
   }, [refreshForms])
   // Fetch Evaluations End
 
-  const [searchQuery, setSearchQuery] = useState(forms && forms);
+  const [searchQuery, setSearchQuery] = useState();
 
   const filteredForms = searchQuery ? forms && forms.filter(form =>
     form.evaluation_title && form.evaluation_title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())
@@ -87,7 +87,7 @@ const AdminCreateFormPanelContai = ({ evalPanel, toggleCreatePanel, setForm, tog
       </div>
       <div className="admin-create-form-panel-forms-">
         <div className="admin-create-form-panel-forms-1">
-          <div className="admin-create-form-panel-forms-2">Forms ({forms && forms.length})
+          <div className="admin-create-form-panel-forms-2">Forms ({filteredForms && filteredForms.length})
           </div>
         </div>
         <div className="admin-create-form-panel-evaluation-list-container">

@@ -80,99 +80,85 @@
   overflow: hidden;
 }
 .form-likert-scale-score-container {
-  position: absolute;
-  height: 18px;
-  left: 263px;
-  right: 263px;
-  top: 14px;
+  position: relative;
+    height: 18px;
+    top: 14px;
+    width: 100%;
 }
 .form-likert-score-1 {
 
-position: absolute;
-width: 8px;
-height: 18px;
-left: calc(50% - 8px/2 + 122px);
-top: 0px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 18px;
-display: flex;
-align-items: center;
-
-color: #000000;
+  position: absolute;
+  height: 18px;
+  left: calc(50% - 8px/2 + 119px);
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex-direction: row;
 }
 .form-likert-score-2 {
 
-position: absolute;
-width: 10px;
-height: 18px;
-left: calc(50% - 10px/2 + 63px);
-top: 0px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 18px;
-display: flex;
-align-items: center;
-
-color: #000000;
+  position: absolute;
+  height: 18px;
+  left: calc(50% - 8px/2 + 60px);
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex-direction: row;
 }
 .form-likert-score-3 {
 
-position: absolute;
-width: 10px;
-height: 18px;
-left: calc(50% - 10px/2 + 1px);
-top: 0px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 18px;
-display: flex;
-align-items: center;
-
-color: #000000;
+  position: absolute;
+  height: 18px;
+  left: calc(50% - 35px/2 + 0px);
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex-direction: row;
 }
 .form-likert-score-4 {
-position: absolute;
-width: 10px;
-height: 18px;
-left: calc(50% - 10px/2 - 60px);
-top: 0px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 18px;
-display: flex;
-align-items: center;
-
-color: #000000;
+  position: absolute;
+  height: 18px;
+  left: calc(50% - 160px/2 + 0px);
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex-direction: row;
 }
 .form-likert-score-5 {
-position: absolute;
-width: 10px;
-height: 18px;
-left: calc(50% - 10px/2 - 121px);
-top: 0px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 18px;
-display: flex;
-align-items: center;
-
-color: #000000;
+  
+  position: absolute;
+  height: 18px;
+  left: calc(50% - 280px/2 + 0px);
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex-direction: row;
 }
 .form-body-evaluation-container {
   position: absolute;
